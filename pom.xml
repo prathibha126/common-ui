@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.premierinc.myanalytics</groupId>
+        <artifactId>master-parent</artifactId>
+        <version>XSC-SNAPSHOT</version>
+        <relativePath />
+    </parent>
+
+    <groupId>com.premierinc.myanalytics</groupId>
+    <artifactId>common-ui</artifactId>
+    <version>fireball-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>Common Dashboard UI</name>
+    <description>Fireball Common Dashboard UI Library</description>
+
+    <scm>
+        <developerConnection>ssh://git@code/mad/common-ui.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <webapp.dir>src/main/webapp</webapp.dir>
+        <webapp.test.dir>src/test</webapp.test.dir>
+        <js.staging.dir>${project.build.directory}/js-build</js.staging.dir>
+        <nodejs.workingDirectory>${js.staging.dir}</nodejs.workingDirectory>
+        <js.scripts.source.dir>${webapp.dir}</js.scripts.source.dir>
+        <js.scripts.test.dir>${webapp.test.dir}</js.scripts.test.dir>
+        <js.scripts.staging.dir>${js.staging.dir}</js.scripts.staging.dir>
+        <js.target.dir>${project.build.directory}/classes/static</js.target.dir>
+        <js.scripts.target.dir>${js.target.dir}/scripts</js.scripts.target.dir>
+        <js.buildModeLibrary>true</js.buildModeLibrary>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>2.7</version>
+            <configuration>
+                <includeEmptyDirs>false</includeEmptyDirs>
+                <delimiters>
+                    <delimiter>${*}</delimiter>
+                    <delimiter>@</delimiter>
+                </delimiters>
+            </configuration>
+
+            <dependencies>
+                <dependency>
+                    <groupId>org.apache.maven.shared</groupId>
+                    <artifactId>maven-filtering</artifactId>
+                    <version>3.0.0</version>
+                </dependency>
+            </dependencies>
+
+            <executions>
+
+                <!-- overlay project javascript resources from scripts folder into staging dir for build -->
+                <execution>
+                    <id>stage-app-js</id>
+                    <phase>process-sources</phase>
+                    <goals>
+                        <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                        <overwrite>true</overwrite>
+                        <outputDirectory>${js.scripts.staging.dir}</outputDirectory>
+                        <resources>
+                            <resource>
+                                <directory>${js.scripts.source.dir}</directory>
+                                <filtering>true</filtering>
+                                <includes>
+                                    <include>webpack.config.js</include>
+                                </includes>
+                            </resource>
+                            <resource>
+                                <directory>${js.scripts.source.dir}</directory>
+                                <filtering>false</filtering>
+                                <excludes>
+                                    <exclude>webpack.config.js</exclude>
+                                </excludes>
+                            </resource>
+                            <resource>
+                                <directory>${js.scripts.test.dir}</directory>
+                                <filtering>false</filtering>
+                                <includes>
+                                    <include>**/scripts/**</include>
+                                </includes>
+                            </resource>
+                        </resources>
+                    </configuration>
+                </execution>
+            </executions>
+            </plugin>
+
+            <!-- Configure the maven-war-plugin to exclude some files and prevent default execution so css minification happens first -->
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.2</version>
+                <!-- add resource filtering to the package.json so the project version number is added
+  "version" : "${project.version}" -->
+                <configuration>
+                    <webResources>
+                        <resource>
+                            <directory>./</directory>
+                            <filtering>false</filtering>
+                            <includes>
+                                <include>package.json</include>
+                                <include>package-lock.json</include>
+                                <include>.npmrc</include>
+                            </includes>
+                        </resource>
+                        <resource>
+                            <directory>${webapp.dir}</directory>
+                            <filtering>false</filtering>
+                        </resource>
+                    </webResources>
+
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>default-war</id>
+                        <phase>none</phase>
+                        <goals>
+                            <goal>war</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>package-war</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <warSourceDirectory>${webapp.dir}</warSourceDirectory>
+                            <warSourceExcludes>**/node_modules/**</warSourceExcludes>
+                        </configuration>
+                        <goals>
+                            <goal>war</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
