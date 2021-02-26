@@ -1,0 +1,601 @@
+html.printlayout,
+.printlayout body.fireball,
+.printlayout #app,
+.printlayout .fireball-container,
+.printlayout .fireball-app-view,
+.printlayout .masthead,
+.printlayout .app-body,
+.printlayout .selection-list,
+.printlayout .app-content,
+.printlayout .fireball .footer.bc,
+.printlayout .fireball .masthead-container,
+.printlayout .fireball .app-container,
+.printlayout .app-header .primary-view-filter-container > .fireball-widget.selection-list-parent-visible .widget-select,
+.printlayout .app-header .primary-view-filter-container .widget-select .bootstrap-select > .dropdown-toggle,
+.printlayout .shady-container, .printlayout .grid-table-container, .printlayout .app-body,
+.printlayout .chart-container-outer, .printlayout .grid-table-container-outer .grid-table-outer,
+.printlayout .shady-container .chart-grid-row .flexbox,
+.printlayout .app-header .primary-view-filter-container {
+	background: #fff !important;
+    border: 0px none !important;
+    zoom: 1;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.printlayout body.fireball {
+    padding: 0;
+    margin: 0;
+}
+
+.printlayout .fireball .bc {
+    position: inherit;
+    max-width: inherit;
+    margin: inherit;
+    padding: 0;
+}
+
+.printlayout .fireball .app-container {
+    border: 0px none;
+}
+
+.printlayout .fireball .shady-container, .printlayout .grid-table-container, .printlayout .app-body,
+.printlayout .fireball .chart-container-outer, .printlayout .grid-table-container-outer .grid-table-outer,
+.printlayout .fireball .shady-container .chart-grid-row .flexbox,
+.printlayout .fireball .app-header .primary-view-filter-container {
+    background: none !important;
+}
+
+.printlayout .shady-container .flexbox > .tile,
+.printlayout .shady-container .flexbox > .card,
+.printlayout .shady-container .flexbox > .chart-grid-row-cell > .card,
+.printlayout .shady-container .flexbox > .chart-grid-row-cell > .measure-trend-chart,
+.printlayout .shady-container .flexbox > .chart-grid-row-cell > .grid-table-container-outer,
+.printlayout .shady-container .flexbox > .chart-grid-row-cell > .measure-trend-chart > .chart-container-outer,
+.printlayout .shady-container .flexbox > .chart-grid-row-cell > .grid-table-container-outer .grid-table-container > .grid-table-outer,
+.printlayout .shady-container .chart-grid .flexbox > .chart-grid-row-cell > .scorecard-outer-container > .scorecard-footer {
+    flex: none;
+}
+
+.printlayout .measure-trend-chart .chart-timeframe-container {
+    display: block;
+}
+
+.printlayout .chart-grid-container .chart-grid,
+.printlayout .shady-container .flexbox > .chart-grid-row-cell:last-child {
+    display: block;
+    flex: none;
+}
+
+.printlayout .chart-grid-container-outer.x3 .chart-grid .chart-grid-row.chart-grid-row-odd,
+.printlayout .chart-grid-container-outer.x3 .chart-grid .chart-grid-row.chart-grid-row-even,
+.printlayout .chart-grid-container-outer.x4 .chart-grid .chart-grid-row.chart-grid-row-odd,
+.printlayout .chart-grid-container-outer.x4 .chart-grid .chart-grid-row.chart-grid-row-even {
+    float: none;
+}
+
+.printlayout #app > .fireball-container {
+    min-width: inherit;
+    width: 800px !important;
+    max-width: 800px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.printlayout.printlayout-landscape #app > .fireball-container {
+    width: 1100px !important;
+    max-width: 1100px !important;
+}
+
+.printlayout.printlayout-nocoverpage .app-header .primary-view-filter-container,
+.printlayout.printlayout-landscape.printlayout-nocoverpage .app-header .primary-view-filter-container {
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    text-align: left;
+}
+
+.printlayout.printlayout-nocoverpage .masthead .branding {
+    top: 5px;
+    background-position: left 0;
+    display: inline-block;
+    float: left;
+    width: 38px;
+}
+
+.printlayout.printlayout-nocoverpage .app-header .view-title {
+    text-align: left;
+    padding: 5px 0;
+}
+
+.printlayout.printlayout-nocoverpage .masthead {
+    height: 35px;
+}
+
+.printlayout.printlayout-nocoverpage .app-title .app-title-text {
+    padding: 0;
+    margin: 0;
+    top: 0;
+    position: static;
+}
+
+.printlayout.printlayout-nocoverpage .app-header .sub-view-title {
+    font-size: 14px;
+}
+
+.printlayout.printlayout-nocoverpage .view-title h2 {
+    font-size: 20px;
+}
+
+.printlayout .masthead .branding img {
+    visibility: hidden;
+}
+
+.printlayout .masthead {
+    padding-top: 50px;
+    text-align: center;
+    height: 150px;
+}
+
+.printlayout .masthead .branding {
+    background: url('../images/premier-connect-logo-color.png') no-repeat;
+    background-size: 140px;
+    background-position: center 0;
+    text-align: center;
+    max-height: 35px;
+    float: none;
+    display: block;
+    top: 50px;
+    position: relative;
+    height: inherit;
+    width: inherit;
+}
+
+.printlayout .app-title h2 {
+    display: block !important;
+}
+
+.printlayout .masthead .branding img.logo {
+    display: inline;
+}
+
+.printlayout .app-header {
+    margin: 0;
+}
+
+.printlayout .app-header .primary-view-filter-container {
+    display: block;
+    clear: both;
+    float: none;
+    margin: 0;
+    position: relative !important;
+    text-align: center;
+    padding: 125px 0;
+    overflow: hidden;
+    min-height: 810px;
+}
+
+.printlayout .primary-view-filter-container-container,
+.printlayout .primary-view-filter-container-container.hidden {
+    display: block !important;
+}
+
+.printlayout.printlayout-landscape .app-header .primary-view-filter-container {
+    padding: 50px;
+    min-height: 550px;
+}
+
+.printlayout .collapsible .bottom-fader {
+    height: 10px;
+    background: white;
+}
+
+.printlayout .app-header .primary-view-filter-container .selection-list-container {
+    margin: 0 10px;
+}
+
+.printlayout .chart-grid .chart-grid-row,
+.printlayout .chart-grid-container-outer.x3 .chart-grid .chart-grid-row {
+    width: 100%;
+}
+
+.printlayout .chart-grid .chart-grid-row.chart-grid-row-odd,
+.printlayout .chart-grid .chart-grid-row.chart-grid-row-even {
+    padding: 0;
+    border-right: 0px none;
+}
+
+.printlayout .user-info, .printlayout .app-help, .printlayout .footer, .printlayout .breadcrumb-container,
+.printlayout .selection-list .prompt-arrow, .printlayout .app-content, .printlayout .toggle-button-bar,
+.printlayout .bootstrap-select.btn-group.fit-width .dropdown-toggle .caret,
+.printlayout .app-nav-icon, .printlayout .ss-layout,
+.printlayout .notification.notification-error,
+.printlayout .notification.notification-fixed,
+.printlayout .button-container .export, .printlayout .button-container .pdf,
+.printlayout .view-container-outer .view-container-controls,
+.printlayout .grid-table-outer .grid-title,
+.printlayout .grid-table-container-outer .grid-filters,
+.printlayout .grid-table-outer .grid-filters,
+.printlayout .chart-grid-container-outer .grid-filters,
+.printlayout .app-header .app-utilities,
+.printlayout .collapsible .expand-collapse,
+.printlayout .loading.overlay,
+.printlayout .primary-view-filter-container-toggle,
+.printlayout .primary-view-filter-container-close.hyperlink,
+.printlayout .primary-view-filter-container:after,
+.printlayout .text-input,
+.printlayout .main-menu-container,
+.printlayout .masthead .app-notifications-container,
+.printlayout .info-tooltip.inside,
+.printlayout .show-hide-filters-button,
+.printlayout .tooltip-indicator,
+.printlayout .grid-table-container-outer .grid-filters .grid-filter .text-input,
+.printlayout .slide-in-menu-close,
+.printlayout .main-menu-more-button,
+.printlayout .main-menu-more-container.bc:before,
+.printlayout .primary-view-filter-container .more-filters-button {
+	display: none !important;
+}
+
+.printlayout .notification.notification-info,
+.printlayout .notification.notification-success,
+.printlayout .notification.notification-warn {
+    background: none;
+    box-shadow: none;
+    border: 0px none;
+}
+
+.printlayout .notification .notification-icon {
+    top: 10px;
+}
+
+.printlayout .app-view {
+	padding: 0;
+    clear: both;
+}
+
+.printlayout .primary-view-filter-container .selection-list-prompt,
+.printlayout .primary-view-filter-container .date-input-prompt {
+    text-transform: none;
+}
+
+.printlayout .primary-view-filter-container .widget-select .bootstrap-select > .dropdown-toggle {
+    color: #333;
+}
+
+.printlayout .app-header .primary-view-filter-container {
+    white-space: inherit !important;
+    overflow: inherit !important;
+    margin-top: 100px;
+}
+
+.printlayout .primary-view-filter-container > .fireball-widget.selection-list-parent-visible .widget-select,
+.printlayout .primary-view-filter-container .selection-list-prompt {
+    margin-left: 0;
+}
+
+.printlayout .primary-view-filter-container > .fireball-widget.selection-list-parent-visible .widget-select {
+    margin-right: 20px;
+}
+
+.printlayout .app-title .app-title-text {
+    color: #999;
+    display: block;
+    font-size: 22px;
+    height: 30px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.printlayout .title-bar-container .title-bar-inner.title-bar-secondary,
+.printlayout .title-bar-container .title-bar-inner.title-bar-secondary .title-bar {
+    background: none;
+    color: #333;
+    padding: 0;
+}
+
+.printlayout .selection-list-block.selection-list-container {
+    clear: both;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.printlayout .selection-list-block.selection-list-container .selection-list-prompt-container {
+    float: none;
+    display: block;
+    clear: both;
+    margin-left: 2px;
+    padding-top: 5px;
+}
+
+.printlayout .primary-view-filter-container .widget-select .bootstrap-select>.dropdown-toggle.bs-placeholder,
+.printlayout .primary-view-filter-container .widget-select .bootstrap-select>.dropdown-toggle.bs-placeholder:active,
+.printlayout .primary-view-filter-container .widget-select .bootstrap-select>.dropdown-toggle.bs-placeholder:focus,
+.printlayout .primary-view-filter-container .widget-select .bootstrap-select>.dropdown-toggle.bs-placeholder:hover,
+.printlayout .primary-view-filter-container .widget-select .bootstrap-select>.dropdown-toggle {
+    padding: 0;
+    border: 0px none;
+    margin: 0;
+}
+
+.printlayout .widget-select .bootstrap-select>.dropdown-toggle {
+    border: 0px none;
+}
+
+.printlayout .selection-list, .printlayout .selection-list select {
+	border: 0 none;
+    padding: 0 !important;
+    height: auto;
+}
+
+.printlayout .selection-list-prompt,
+.printlayout .text-input-prompt,
+.printlayout .primary-view-filter-container .widget-select .selection-list-prompt {
+    margin-right: 5px;
+    display: inline-block;
+    max-width: inherit;
+    width: inherit;
+    line-height: inherit;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.printlayout .selection-list-container {
+    margin-left: 20px;
+    margin-right: 0;
+    display: inline-block;
+}
+
+.printlayout .widget-select .bootstrap-select>.dropdown-toggle,
+.printlayout .selection-list,
+.printlayout .selection-list * {
+    max-width: inherit;
+    font-size: 12px;
+    text-align: left;
+    white-space: nowrap; /* TODO */
+}
+
+.printlayout .grid-table-container, .printlayout .chart-grid-container {
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.printlayout .chart-container .legend-container {
+    display: block !important;
+    margin: 0;
+    padding: 0 10px 0 20px;
+    top: -10px;
+    right: 0;
+    bottom: auto;
+    width: 110px !important;
+    float: right;
+}
+
+.printlayout .chart-container-outer h4 {
+    display: block;
+    min-height: inherit !important;
+    padding-left: 25px;
+}
+
+.printlayout .chart-container-outer .measure-status-icon {
+    margin-left: 7px;
+}
+
+.printlayout .d3-chart {
+    display: block;
+    clear: both;
+}
+
+.printlayout .d3-chart.d3 .chart-legend {
+    max-width: 175px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.printlayout .d3-chart .chart-legend .chart-legend-item {
+    margin: 0;
+}
+
+.printlayout .d3-chart .chart-legend i {
+    height: 15px;
+}
+
+.printlayout .d3-chart .chart-legend .chart-legend-value {
+    font-size: 18px;
+}
+
+.printlayout .scorecard-footer .scorecard-footer-inner .app-context-summary-item {
+    display: inline-block;
+}
+
+.printlayout .scorecard-footer {
+    padding: inherit;
+}
+
+.printlayout .app-context-summary-simple .app-context-summary-item {
+    float: left;
+}
+
+.printlayout .app-context-summary-simple .app-context-summary-item .header-value,
+.printlayout .app-context-summary-simple .app-context-summary-item .header-label {
+    color: #666; /* make same color as filters */
+}
+
+.printlayout .info-tooltip {
+    margin: 0 !important;
+    position: inherit !important;
+    float: none;
+    right: inherit !important;
+    left: inherit !important;
+}
+
+.printlayout .info-tooltip .info-icon {
+    margin: 0;
+    float: left
+}
+
+.printlayout .info-tooltip .tooltip-print-layout-text {
+    display: inline;
+}
+
+.printlayout .tooltip-container {
+    display: block;
+    position: static;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0px none;
+    padding: 0;
+    margin-left: 25px;
+    margin-top: 0;
+    font-size: 12px !important;
+}
+
+
+/***** this is critical to enforce page breaks! container cannot be floated or have overflow auto/scroll */
+.printlayout .chart-container-outer,
+.printlayout .grid-table-container-outer .grid-table-outer,
+.printlayout .chart-grid {
+    overflow: visible !important;
+    float: none;
+    padding: 0;
+    min-height: inherit !important;
+}
+
+.printlayout .d3-chart .chart-legend {
+    padding-top: 0;
+}
+
+.printlayout .chart-grid .chart-container {
+    padding: 0;
+}
+
+.printlayout .chart-container .chart,
+.printlayout .primary-view-filter-container .widget-select .bootstrap-select.btn-group:not(.input-group-btn) {
+    display: inline-block;
+}
+
+.printlayout .app-header .primary-view-filter-container {
+    text-align: center;
+    padding: 5px 50px;
+    line-height: 15px;
+    display: block;
+    position: relative;
+    top: 5px;
+}
+
+.printlayout .app-header .primary-view-filter-container .selection-list-container .selection-list-prompt,
+.printlayout .app-header .primary-view-filter-container .selection-list-container .selection-list-inner {
+    font-size: 12px;
+    display: inline-block;
+}
+
+.printlayout .card,
+.printlayout .chart-container-outer,
+.printlayout .grid-table-container-outer .grid-table-outer,
+.printlayout .chart-grid .scorecard-footer {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.printlayout .card {
+    border: 0px none;
+    padding: 0;
+}
+
+.printlayout .grid-table, .printlayout .chart-grid {
+    page-break-inside: auto;
+    padding-top: 0;
+}
+
+.printlayout .grid-table td, .printlayout .grid-table th, .printlayout .grid-table td *, .printlayout .grid-table th *,
+.printlayout .grid-table tr, .printlayout img, .printlayout .chart-grid .chart-grid-row {
+    page-break-inside: avoid !important;
+}
+
+.printlayout .grid-table th, .printlayout .grid-table td {
+    padding: 10px 5px 10px 5px;
+}
+
+.printlayout .grid-table-container-outer .grid-overview .app-legend,
+.printlayout .chart-grid-container-outer .grid-overview .app-legend {
+    margin-bottom: 0;
+}
+
+.printlayout .grid-table-container,
+.printlayout .shady-container {
+    padding: inherit;
+}
+
+.printlayout .app-header .view-title {
+    display: block;
+    clear: both;
+    max-width: inherit;
+    float: none;
+    background: none;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.printlayout .app-header .sub-view-title {
+    padding: 5px 0 0 0;
+    font-size: 12px;
+}
+
+.printlayout .app-header .view-title-subtitle {
+    float: none;
+    min-width: inherit;
+    max-width: inherit;
+    margin: 0;
+}
+
+.printlayout .domain-measure .measure-desc,
+.printlayout .hyperlink, .printlayout .grid-table td,
+.printlayout .grid-table-outer .grid-table .grid-row .grid-cell .hyperlink {
+    color: #333;
+}
+
+.printlayout .selection-list-block.selection-list-container .selection-list-prompt-header {
+    white-space: nowrap;
+    min-width: inherit;
+    padding-right: 5px;
+}
+
+.printlayout .app-overview-title-minor, .app-context-summary-item .header-label {
+    font-size: 14px;
+}
+
+.printlayout .scorecard-footer .scorecard-footer-inner .app-context-summary-item,
+.printlayout .scorecard-footer .scorecard-footer-inner {
+    background: none;
+}
+
+/* canvas-based charts cannot support line dash in pdf */
+.printlayout .chart-line .legend-item.dashed .legend-item-stroke {
+    background: #80A61C !important;
+}
+
+.printlayout .chart-line .legend-item.dotted .legend-item-stroke {
+    background: #5e255f !important;
+}
+
+.printlayout .chart-line .legend-item.dashed-dotted .legend-item-stroke {
+    background: #FF9326 !important;
+}
+
+.printlayout .chart-line .legend-item.dashed-double-dotted .legend-item-stroke {
+    background: #D900D9 !important;
+}
