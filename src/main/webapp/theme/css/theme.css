@@ -1,0 +1,18 @@
+body.fireball, .fireball .app-container {
+    background: #003b49;
+}
+
+.fireball .app-container {
+    border-top: 4px solid #0591b2;
+}
+
+.fireball .footer.bc, .fireball .masthead-container {
+    background: #003b49;
+}
+
+.masthead .branding img {
+    height: 30px;
+    display: inline;
+    vertical-align: middle;
+    border: 0px none;
+}
