@@ -1,0 +1,16 @@
+<div class="overlay" data-attach-point="overlay">
+    <div class="modal-window ${viewId}" data-attach-point="modalContainer">
+        <div class="modal-title" data-bind-value="title"></div>
+        <div class="modal-close ${closeClass}" data-attach-point="closeButton" aria-label="Close" tabindex="0" aria-pressed="false" role="button"></div>
+        <div class="modal-container">
+            <div data-attach-point="notificationContainer"></div>
+            <div class="modal-inner" data-attach-point="viewContent">
+                <div data-attach-point="widgets"></div>
+            </div>
+        </div>
+        <div class="modal-footer-container" data-attach-point="modalFooter">
+            <!--<button class="modal-action-button" data-action="cancel">${buttonCancelLabel}</button>-->
+            <div class="modal-action-button button-primary ${okClass}" data-action="ok">${buttonOkLabel}</div>
+        </div>
+    </div>
+</div>

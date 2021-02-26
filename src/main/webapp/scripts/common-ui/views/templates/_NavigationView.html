@@ -1,0 +1,111 @@
+<div class="fireball-container">
+    <a class="skip-link d-n-s" tabindex="0" role="button" href="#main">Skip to main content</a>
+    <div class="masthead-container" data-attach-point="mastheadContainer">
+        <div class="masthead bc">
+            <div class="main-menu-more-button hidden" data-attach-point="navMenuMoreToggle" tabindex="0" aria-pressed="false" role="button" aria-label="Navigation Menu">
+                <i class="glyphicon glyphicon-menu-hamburger"></i>
+            </div>
+            <div class="branding">
+
+                <a href="${logoUrl}" title="${logoTooltip}" rel="noopener" data-attach-point="brandingLogo"><img alt="logo" class="logo" src="theme/images/logo.png"></a>
+            </div>
+
+            <div class="app-title">
+                <a href="${homeUrl}">
+                    <img class="app-logo" src="images/logo-${viewClass}.png">
+                    <h2 class="app-title-text" data-attach-point="title"></h2>
+                </a>
+            </div>
+
+            <div class="main-menu-container right">
+                <div class="main-menu-button hidden" data-attach-point="mainMenuButton" tabindex="0" aria-pressed="false" aria-label="Menu" role="button">
+                    <img alt="User Menu Icon" src="images/profile-default.png" class="user-image" onerror="this.src='images/profile-default.png'" data-attach-point="userImage">
+                    <span class="user-name" data-bind-value="userName"></span>
+                    <i class="menu-icon glyphicon glyphicon-chevron-down"></i>
+                </div>
+                <div class="main-menu slide-in-menu hidden" data-attach-point="mainMenu">
+                    <div class="main-menu-header hidden" data-attach-point="mainMenuSlideInMenu">
+
+                        <span class="slide-in-menu-close" title="Close" aria-label="Close" tabindex="0" aria-pressed="false" role="button">&times;</span>
+                        <div class="user-info">
+                            <span data-bind-value="userName" class="main-menu-name"></span>
+                            <div data-bind-value="userEmail"></div>
+                            <span data-bind-value="userInfo"></span>
+                        </div>
+                    </div>
+                    <div class="main-menu-options" data-attach-point="profileMenu"></div>
+                </div>
+            </div>
+
+            <div class="title-bar-widgets" data-attach-point="titleBarWidgets"></div>
+
+            <div class="app-notifications-container">
+                <div class="app-notifications">
+                    <div class="notification-icon hide" data-attach-point="appNotifications"></div>
+                </div>
+                <div class="app-notifications-list" data-attach-point="appNotificationsList"></div>
+            </div>
+
+            <div class="main-menu-nav-bar-container nav-menu-parent-container">
+                <div class="main-menu-nav-bar toggle-button-bar" data-attach-point="navMenu">
+                    <div class="main-menu-nav-bar-inner" data-attach-point="navMenuOptions"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main-menu slide-in-menu slide-in-menu-left hidden" data-attach-point="navMenuMoreContainer">
+            <div class="main-menu-header">
+                <i class="main-menu-more-icon-only glyphicon glyphicon-menu-hamburger"></i>
+                <span class="slide-in-menu-close" title="Close" aria-label="Close" tabindex="0" aria-pressed="false" role="button">&times;</span>
+            </div>
+            <div class="main-menu-more-container nav-menu-parent-container" data-attach-point="navMenuMore"></div>
+        </div>
+
+    </div>
+
+    <div class="app-container">
+        <div class="top-box">
+            <div class="bc">
+                <div class="breadcrumb-container">
+                    <div class="breadcrumbs" data-attach-point="breadcrumbContainer"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-body ${viewClass}">
+
+            <div class="top-box">
+                <div class="app-header bc" data-attach-point="appHeaderContainer">
+                    <div class="app-title-filters">
+                        <div class="view-title" data-attach-point="viewTitleContainer">
+                            <div class="view-title-subtitle" data-attach-point="viewTitleSubtitle">
+                                <h2 data-attach-point="viewTitle">&nbsp;</h2>
+                            </div>
+                            <div class="primary-view-filter-container" data-attach-point="primaryViewFilters">
+                                <div class="more-filters-button btn-default hidden" data-attach-point="filterToggle" tabindex="0" aria-pressed="false" role="button" aria-label="Show More Filters">
+                                    <i class="glyphicon glyphicon-filter"></i>
+                                    <span class="selection-list-prompt" data-bind-value="filterLabel"></span>
+                                    <div class="more-filters-button-show-more">Show More</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view-filters" data-attach-point="viewContent"></div>
+                    </div>
+
+                    <div class="notification-container" data-attach-point="notificationContainer"></div>
+                </div>
+            </div>
+            <div class="fireball-app-view">
+                <div class="widgets clearfix bc" data-attach-point="appWidgets"></div>
+                <div class="app-view-container bc" data-attach-point="appViewContainer" id="main"></div>
+                <div class="app-view-container-lower bc" data-attach-point="appViewContainerLower"></div>
+            </div>
+        </div>
+
+        <footer class="footer bc" data-attach-point="footer"></footer>
+    </div>
+
+    <span class="preload1"></span><span class="preload2"></span>
+    <div class="menu-layer" data-attach-point="menuLayer"></div>
+</div>
