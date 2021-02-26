@@ -1,0 +1,398 @@
+[
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "change",
+    "desc": "Row Selection",
+    "payloadDesc": "The data for the selected row"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "[columnName].change",
+    "desc": "Selection/clicking of a row within the column named columnName",
+    "payloadDesc": "The data for the selected row plus a property named \"|[columnName]\" including the data from the specific column widget if specified"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "sameRowClick",
+    "desc": "Row that was previously clicked is immediately clicked again",
+    "payloadDesc": "Includes the row index, data for the row, name of the column clicked, and event"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "rowClick",
+    "desc": "When a row is clicked in a table",
+    "payloadDesc": "Includes the row index, data for the row, name of the column clicked, and event"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "[columnName].[type]",
+    "desc": "If a widget in a grid is clicked, an event with the column name and type pf event that was dispatched by the widget is dispatched by the grid",
+    "payloadDesc": "Includes all of the data for the row that was clicked"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "titleClick",
+    "desc": "Title selection",
+    "payloadDesc": "Includes the data in the overview portion of the grid"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "filterChange",
+    "desc": "Filter selection",
+    "payloadDesc": "All of the filter values"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "filterApply",
+    "desc": "Apply button clicked if enabled",
+    "payloadDesc": "All of the filter values"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "filterReset",
+    "desc": "Reset filters",
+    "payloadDesc": "All of the filter values"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "filterAction",
+    "desc": "If the filter is a button then this event will fire when the button is clicked",
+    "payloadDesc": "Has an action that contains the name for the filter"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "headerRendered",
+    "desc": "Dispatched once the header is rendered for a grid",
+    "payloadDesc": "The dom node that the header is attached to"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "gridDataRendered",
+    "desc": "Event dispatched at the end of the grid rendering",
+    "payloadDesc": "The data is the node in the dom that the grid is attached to"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "gridDataUpdated",
+    "desc": "Event dispatched once the data in the table has been updated",
+    "payloadDesc": "Contains all of the data for each row in the table"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "gridActionComplete[PendingAction]",
+    "desc": "Pending event completed with the [PendingAction] having the first letter capitalized",
+    "payloadDesc": "Both an action and data are included"
+  },
+  {
+    "widgetType": "_MetadataDrivenGrid",
+    "event": "gridActionComplete",
+    "desc": "Generic pending event completed event",
+    "payloadDesc": "Both an action and data are included"
+  },
+  {
+    "widgetType": "GridTable",
+    "event": "excelExport",
+    "desc": "Exported to Excel",
+    "payloadDesc": "None"
+  },
+  {
+    "widgetType": "GridTable",
+    "event": "footerClick",
+    "desc": "Footer of grid is clicked",
+    "payloadDesc": "None"
+  },
+  {
+    "widgetType": "Button",
+    "event": "change",
+    "desc": "Button click",
+    "payloadDesc": "Data attached to the button if there is any"
+  },
+  {
+    "widgetType": "Button",
+    "event": "click",
+    "desc": "Button click",
+    "payloadDesc": "Data attached to the button if there is any"
+  },
+  {
+    "widgetType": "DataSet",
+    "event": "change",
+    "desc": "Dispatched when the data is updated",
+    "payloadDesc": "Updated data"
+  },
+  {
+    "widgetType": "DomainItem",
+    "event": "domainClick",
+    "desc": "Domain item selection (click of the title of a domain item)",
+    "payloadDesc": "Data for the domain item that was clicked"
+  },
+  {
+    "widgetType": "DomainItem",
+    "event": "measureClick",
+    "desc": "Measure item inside a domain item selection",
+    "payloadDesc": "Domain data, domain id, measure data, and measure id"
+  },
+  {
+    "widgetType": "DomainItem",
+    "event": "change",
+    "desc": "Domain item selection (click of the title of a domain item) or selection of a measure item inside a domain item",
+    "payloadDesc": "Data for the domain item that was clicked or domain data, domain id, measure data, and measure id if a measure was clicked"
+  },
+  {
+    "widgetType": "DomainSummary",
+    "event": "excelExport",
+    "desc": "Domain summary exported to Excel",
+    "payloadDesc": "None"
+  },
+  {
+    "widgetType": "DomainSummary",
+    "event": "domainClick",
+    "desc": "Domain item selection (click of the title of a domain item)",
+    "payloadDesc": "Data for the domain item that was clicked"
+  },
+  {
+    "widgetType": "DomainSummary",
+    "event": "measureClick",
+    "desc": "Measure item inside a domain item selection",
+    "payloadDesc": "Domain data, domain id, measure data, and measure id"
+  },
+  {
+    "widgetType": "DomainSummary",
+    "event": "change",
+    "desc": "Domain item selection (click of the title of a domain item) or selection of a measure item inside a domain item",
+    "payloadDesc": "Data for the domain item that was clicked or domain data, domain id, measure data, and measure id if a measure was clicked"
+  },
+  {
+    "widgetType": "FileUpload",
+    "event": "change",
+    "desc": "File selected",
+    "payloadDesc": "The file that is selected"
+  },
+  {
+    "widgetType": "FileUpload",
+    "event": "submit",
+    "desc": "File submitted",
+    "payloadDesc": "None"
+  },
+  {
+    "widgetType": "FileUpload",
+    "event": "persisted[notificationType]",
+    "desc": "Shows if the response to the file upload has a notification on submit",
+    "payloadDesc": "Contains the json response"
+  },
+  {
+    "widgetType": "FileUpload",
+    "event": "persistedSuccess",
+    "desc": "File upload and submit succeeded",
+    "payloadDesc": "Contains the json response"
+  },
+  {
+    "widgetType": "FileUpload",
+    "event": "persisted",
+    "desc": "General event for submit",
+    "payloadDesc": "Contains the json response"
+  },
+  {
+    "widgetType": "Notification",
+    "event": "closed",
+    "desc": "Notification closed",
+    "payloadDesc": "Data for the notification"
+  },
+  {
+    "widgetType": "Notification",
+    "event": "continue",
+    "desc": "Continue button clicked in notification",
+    "payloadDesc": "Value contains the data for the notification"
+  },
+  {
+    "widgetType": "Notification",
+    "event": "[customEvent]",
+    "desc": "Button is clicked in the notification to fire a custom event",
+    "payloadDesc": "Data for the notification"
+  },
+  {
+    "widgetType": "Select",
+    "event": "change",
+    "desc": "Making a selection in the dropdown",
+    "payloadDesc": "The selected item"
+  },
+  {
+    "widgetType": "Select",
+    "event": "changeAgain",
+    "desc": "Making a selection in the dropdown after the initial selection",
+    "payloadDesc": "The selected item"
+  },
+  {
+    "widgetType": "Select",
+    "event": "toggleDataVisible",
+    "desc": "When minVisibleItems is set this will say whether or not the Select widget is visible",
+    "payloadDesc": "Boolean of visibility where true means visible"
+  },
+  {
+    "widgetType": "SummaryBar",
+    "event": "change",
+    "desc": "When the summary bar is interactive, this will handle the click event.  If it's not interactive, then this will dispatch when there is an update to the data",
+    "payloadDesc": "The selected summary bar item or the new data"
+  },
+  {
+    "widgetType": "ToggleBar",
+    "event": "change",
+    "desc": "Toggle selection",
+    "payloadDesc": "The selected item"
+  },
+  {
+    "widgetType": "WizardProgressBar",
+    "event": "change",
+    "desc": "Change of progress through the wizard",
+    "payloadDesc": "The data at the current step"
+  },
+  {
+    "widgetType": "TextInput",
+    "event": "keypress",
+    "desc": "When a key is pressed in the text box",
+    "payloadDesc": "The value currently in the text box"
+  },
+  {
+    "widgetType": "TextInput",
+    "event": "change",
+    "desc": "If changeOnKeyPress is true then this will be the result of the key press.",
+    "payloadDesc": "The value in the text box"
+  },
+  {
+    "widgetType": "Form",
+    "event": "inputChange",
+    "desc": "If an input change passes validation, this is the value that was changed",
+    "payloadDesc": "An object that has the name on the input and the new value"
+  },
+  {
+    "widgetType": "Form",
+    "event": "change",
+    "desc": "An event dispatched on the submit of the the form",
+    "payloadDesc": "the data map of all of the inputs and their values on submit of the form"
+  },
+  {
+    "widgetType": "Form",
+    "event": "submit",
+    "desc": "An event dispatched on the submit of the the form",
+    "payloadDesc": "the data map of all of the inputs and their values on submit of the form"
+  },
+  {
+    "widgetType": "Form",
+    "event": "persistedSuccess",
+    "desc": "An event dispatched on successful return from the submit of the form",
+    "payloadDesc": "the data map of all of the inputs and their values on submit of the form"
+  },
+  {
+    "widgetType": "DateTimePicker",
+    "event": "change",
+    "desc": "Date selected",
+    "payloadDesc": "The value of the selection"
+  },
+  {
+    "widgetType": "Checkbox",
+    "event": "change",
+    "desc": "Value change",
+    "payloadDesc": "Object of the new \"selected\" value"
+  },
+  {
+    "widgetType": "Checkbox",
+    "event": "click",
+    "desc": "Value change",
+    "payloadDesc": "Object of the new \"selected\" value"
+  },
+  {
+    "widgetType": "_ViewContainer",
+    "event": "viewChange",
+    "desc": "View updated",
+    "payloadDesc": "The new widget in view"
+  },
+  {
+    "widgetType": "_ViewContainer",
+    "event": "viewIndexChange",
+    "desc": "View updated",
+    "payloadDesc": "The index of the new widget in view"
+  },
+  {
+    "widgetType": "DonutChart",
+    "event": "change",
+    "desc": "Click on a slice of the donut/pie chart",
+    "payloadDesc": "The selected value"
+  },
+  {
+    "widgetType": "DonutChart",
+    "event": "selectionClick",
+    "desc": "Click on a slice of the donut/pie chart",
+    "payloadDesc": "The selected value"
+  },
+  {
+    "widgetType": "ScatterPlot",
+    "event": "change",
+    "desc": "Click on a piece of the scatter plot",
+    "payloadDesc": "The selected value"
+  },
+  {
+    "widgetType": "ScatterPlot",
+    "event": "selectionClick",
+    "desc": "Click on a piece of the scatter plot",
+    "payloadDesc": "The selected value"
+  },
+  {
+    "widgetType": "MeasureTrendChart",
+    "event": "change",
+    "desc": "Data in the measure trend chart updated",
+    "payloadDesc": "Updated data"
+  },
+  {
+    "widgetType": "MeasureTrendChart",
+    "event": "click",
+    "desc": "A click on the measure trend chart",
+    "payloadDesc": "The data for the chart"
+  },
+  {
+    "widgetType": "BubbleChart",
+    "event": "change",
+    "desc": "Click on a bubble",
+    "payloadDesc": "The selected value"
+  },
+  {
+    "widgetType": "BubbleChart",
+    "event": "selectionClick",
+    "desc": "Click on a bubble",
+    "payloadDesc": "The selected value"
+  },
+  {
+    "widgetType": "_D3Chart",
+    "event": "change",
+    "desc": "Click on an object in the chart that has a tooltip",
+    "payloadDesc": "The selected value"
+  },
+  {
+    "widgetType": "_D3Chart",
+    "event": "selectionClick",
+    "desc": "Click on an object in the chart that has a tooltip",
+    "payloadDesc": "The selected value"
+  },
+  {
+    "widgetType": "BarChart",
+    "event": "barClick",
+    "desc": "Data from the specific bar that was clicked",
+    "payloadDesc": "The selected value"
+  },
+  {
+    "widgetType": "HorizontalBarChart",
+    "event": "barClick",
+    "desc": "Data from the specific bar that was clicked",
+    "payloadDesc": "The selected value"
+  },
+  {
+    "widgetType": "_TemplatedWidget",
+    "event": "toggleExpanded",
+    "desc": "Widget expanded or collapsed",
+    "payloadDesc": "Boolean for whether or not it was expanded.  True if the widget was expanded."
+  },
+  {
+    "widgetType": "_Widget",
+    "event": "toggleVisible",
+    "desc": "Widget becomes visible or hidden",
+    "payloadDesc": "Boolean for visibility.  True if widget is visible."
+  }
+]

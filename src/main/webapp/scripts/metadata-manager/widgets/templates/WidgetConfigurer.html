@@ -1,0 +1,78 @@
+<div class="widget-configurer">
+    <!--<h1 data-bind-value="widgetType"></h1> -->
+
+    <div class="widget-options clearfix">
+        <div class="left widget-select ${showWidgetSelect}" data-attach-point="widgetSelect"></div>
+        <div class="left" data-attach-point="widgetConfigSelect"></div>
+        <button class="right primary-button" data-bind-value="continueLabel" data-attach-point="continueButton"></button>
+    </div>
+
+    <div class="sample-widget-container clearfix padded">
+        <div data-attach-point="widget"></div>
+    </div>
+    <div data-attach-point="tabBar"></div>
+
+    <div data-attach-point="tabs" class="widget-info-tab-container">
+        <div data-tab-id="tab1" data-tab-name="Widget Configuration" data-tab-icon="glyphicon-cog">
+            <div class="firebox flexbox">
+                <div class="firebox-item">
+                    <p class="widget-info-desc">JSON is used to configure this widget within your project; only properties with values overriden on the form below will appear here, otherwise defaults are inherited</p>
+                    <pre class="code" data-bind-content="widgetPropertyConfig"></pre>
+                </div>
+                <div class="firebox-item">
+                    <h2>Widget Data</h2>
+                    <p class="widget-info-desc">Sample data that can be provided to the widget. <b>Edit</b> the data below to see changes live!</p>
+                    <div class="widget-config-textarea-container">
+                        <textarea class="code config-editor" data-attach-point="widgetDataConfig"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden" data-tab-id="tab2" data-tab-name="Widget Properties" data-tab-icon="glyphicon-list-alt">
+            <p data-bind-value="widgetDescription"></p>
+            <div>
+                <p class="widget-info-desc">These properties are available to configure the widget; the default values are shown below and can be modified to see the impact above</p>
+                <div class="widget-properties" data-attach-point="widgetProperties"></div>
+            </div>
+        </div>
+
+
+        <div class="hidden" data-tab-id="tab3" data-tab-name="Widget Functions" data-tab-icon="glyphicon-random">
+            <div class="firebox flexbox">
+                <div class="firebox-item">
+                    <p class="widget-info-desc">These methods are available to call on the widget as an "action" via widgetBindings</p>
+                    <div class="widget-functions" data-attach-point="widgetFunctions"></div>
+                </div>
+                <div class="firebox-item">
+                    <h2>Call Function via Widget Binding</h2>
+                    <p class="widget-info-desc">Widget Bindings, which simply bind event listeners to other widgets, can be used to call a function on a widget when the bound widget dispatches the specified event (and optionally the data/payload included with the event matches a query).</p>
+                    <pre class="code"> <!-- data-bind-content="widgetBindingConfig"-->
+"widgetBindings" : {
+  "nameOfWidgetWeAreBindingTo" : [{
+     "event" : "change",
+     "action" : "setVisible",
+     "args" : [ "${nameOfWidgetWeAreBindingTo.isVisible}" ]
+   }]
+}
+                    </pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden" data-tab-id="tab4" data-tab-name="Widget Events" data-tab-icon="glyphicon-calendar">
+            <div class="firebox flexbox">
+                <div class="firebox-item">
+                    <h2>Events Options</h2>
+                    <p class="widget-info-desc">The widget can dispatch any of the following events which can be used in view triggers (e.g. "myWidget.change", where change is the name of the event dispatched from myWidget) and widget bindings to enable complex user interactions and data flow.</p>
+                    <div class="widget-events" data-attach-point="widgetEvents"></div>
+                </div>
+                <div class="firebox-item">
+                    <h2>Live Event Log</h2>
+                    <p class="widget-info-desc">Events that have been dispatched while interacting with the widget on this page</p>
+                    <div class="widget-event-log" data-attach-point="widgetEventLog"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+<div class="meta">
+    <div data-attach-point="toggleBar"></div>
+
+    <div class="mvc metadata-container metadata-properties" data-attach-point="basic">
+        <div class="metadata-section">
+            <h3>${moduleCode}, <i>powered by Fireball</i></h3>
+            <p>
+                Use the Metadata Manager to build out your Fireball dashboard. This screen allows you to configure application-level elements
+                including properties. You can then specify data sets in the "Data" tab and subsequently configure
+                Menu Options, Filters and Views using the corresponding tabs.
+            </p>
+        </div>
+        <div class="metadata-section">
+            <h3>Application Properties</h3>
+            <p>
+                Configure global application properties here. Use the button below to customize any of the following properties (as well as adding any app-specific properties):
+                <li><i>title:</i> The title for your dashboard. This shows up at the top and is the HTML document title.</li>
+                <li><i>help_url:</i> The URL to your application's help content. If specified, a help icon (<span style="color: #666;"><b>?</b></span>) is shown on the top right of the dashboard.</li>
+                <li><i>logout_url:</i> The URL a user should be redirected to upon logout. Defaults to /pkmslogout</li>
+                <li><i>premierconnect_url:</i> The URL for the PremierConnect breadcrumb. Defaults to https://premierconnect.premierinc.com</li>
+            </p>
+            <div>
+                <span class="metadata-property metadata-add-button" data-p-type="rootProperty">
+                    + property
+                </span>
+                <div data-attach-point="rootPropertiesContainer"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mvc metadata-container" data-attach-point="data">
+        <h3>Data Sets</h3>
+        <p>For many use cases you can define data sets here, and a RESTful web service will be automatically configured that will
+        execute the query and map the data as specified. After you have defined data sets here, you can associate them with
+        filters and other widgets on the subsequent tabs.</p>
+        <div class="metadata-section">
+            <span class="metadata-property metadata-add-button" data-p-type="dataRequest">
+                + data set
+            </span>
+            <div data-attach-point="dataRequestContainer"></div>
+        </div>
+    </div>
+
+    <div class="mvc metadata-container metadata-properties" data-attach-point="filterMenu">
+
+        <div class="metadata-section">
+            <h3>Menu Options</h3>
+            <p>Menu options are shown beneath the <img alt="settings" src="images/icon-settings.png" style="height: 14px"> icon on the
+                top right of the screen. Configure all menu options here and specify which are present on each view within that view.</p>
+            <div>
+                <span class="metadata-property metadata-add-button" data-p-type="menuOption">
+                    + menu option
+                </span>
+                <div data-attach-point="menuOptionsContainer"></div>
+            </div>
+        </div>
+
+        <h3>Filters</h3>
+        <p>Filters are displayed across the top of the dashboard. Filters can remain across views or show/hide as needed.
+            Configure all navigation filters here and specify which are present for each view within that view.</p>
+        <div class="metadata-section">
+            <span class="metadata-property metadata-add-button" data-p-type="navFilter">
+                + filter
+            </span>
+            <div class="vertical-center" data-attach-point="navigationContainer"></div>
+        </div>
+
+        <h3>Multi-Screen Header Widgets</h3>
+        <p>The same widget can often appear in the header across multiple screens. Rather than having to create multiple
+            instances of that widget and populate it with the same data, just define a "header" widget here.</p>
+        <div class="metadata-section">
+            <span class="metadata-property metadata-add-button" data-p-type="navWidget">
+                + widget
+            </span>
+            <div class="vertical-center" data-attach-point="navigationWidgetContainer"></div>
+        </div>
+    </div>
+
+    <div class="mvc metadata-views" data-attach-point="views">
+        <div data-attach-point="viewTabBar" class="view-tab-bar"></div>
+        <div class="metadata-section metadata-views">
+            <div data-attach-point="viewsContainer"></div>
+            <!--<div class="widget-option-container no-select" data-attach-point="widgetOptionsContainer"></div>-->
+        </div>
+    </div>
+
+
+    <div class="mvc metadata-container" data-attach-point="advanced">
+        <h3>Advanced</h3>
+        <p>Use this screen to modify the metadata directly. <b>Be careful</b>, as changes here are automatically persisted when
+            the text area is blurred (assuming it is valid JSON). Invalid JSON is not persisted until corrected.
+            Note that property names must be enclosed in strings.
+            Also keep in mind that referential integrity can be compromised if you choose to do so!</p>
+        <div class="metadata-advanced" data-attach-point="metadataContainer"></div>
+    </div>
+
+    <div class="mvc metadata-container" data-attach-point="help">
+        <h3>Frequently Asked Questions</h3>
+        <p>The Fireball documentation on CODE is the best source of current information.</p>
+        <br>
+        <h4>What is Fireball?</h4>
+        <p>You should probably have a good idea if you've come this far, but here's the overview: <a href="https://code.premierinc.com/docs/display/FIREBALL/Fireball" target="_blank">https://code.premierinc.com/docs/display/FIREBALL/Fireball</a></p>
+        <h4>I need a new feature added. Who does that?</h4>
+        <p>It depends. The Fireball team does have a backlog and will happily incorporate new functionality in the framework. However, if you don't have the time to wait
+            or would just prefer to add it yourself, you have a few options. If what you need is not something anyone else could ever benefit from, you can always just
+            write that custom functionality in your dashboard's codebase. Otherwise, we greatly appreciate anyone who is willing to branch Fireball, make your changes,
+            and submit a pull request for review. See <a href="https://code.premierinc.com/docs/display/FIREBALL/Fireball" target="_blank">https://code.premierinc.com/docs/display/FIREBALL/Fireball</a>
+            for more info on that.
+        </p>
+        <h4>Where do I submit bugs/issues?</h4>
+        <p><a href="https://code.premierinc.com/issues/browse/FIREBALL/?selectedTab=com.atlassian.jira.jira-projects-plugin:issues-panel" target="_blank">Here</a></p>
+        <h4>I've changed some metadata. Now how do I backup those changes and push them to the project?</h4>
+        <p>The changes have already been made to the "${moduleCode}.json" file in your project's <i>WEB-INF/metadata</i> directory. Just commit and push!</p>
+        <h4>Why is the metadata represented with JSON?</h4>
+        <p>Because. The UI loves JSON, so why over-complicate things with a database dependency and corresponding convoluted table structure. JSON is
+        incredibly fast and flexible. It also allows us to sandbox metadata changes within an environment rather than immediately distributing them
+        to all users of a shared data source prior to the rest of the codebase being in sync.</p>
+
+        <h4>What is the Advanced Configuration tab needed for?</h4>
+        <p>Advanced stuff.</p>
+        <h4>When is custom UI code needed?</h4>
+        <p>Not often.</p>
+    </div>
+
+</div>

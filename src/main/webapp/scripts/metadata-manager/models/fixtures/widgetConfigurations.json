@@ -1,0 +1,2062 @@
+[
+  {
+    "widgetType": "AreaChart",
+    "config": [
+      {
+        "fixture": "areaChart/areaChartData1-1.json"
+      },
+      {
+        "fixture": "areaChart/areaChartData1-2.json",
+        "widgetProperties" : {
+          "areaStacked" : false,
+          "hideLegendValues" : true
+        }
+      }
+    ],
+    "widgetProperties": {
+      "areaStacked": {
+        "type": "Boolean",
+        "desc": "true if the area chart series are stacked on each other; ensure this is set to false if y0 values are provided"
+      },
+      "labels": {
+        "type": "Array",
+        "desc": "a list of labels for the x-axis if they are not provided in the widget’s JSON data"
+      },
+      "formatString": {
+        "type": "String",
+        "desc": "format of the numbers on the axis and legend (see Numeral.js). Default is \"\""
+      },
+      "baseClass": {
+        "type": "String",
+        "desc": "the base class for the widget's div. Default is \"card\" which adds the shading around the chart to create a card effect"
+      },
+      "title": {
+        "type": "String",
+        "desc": "The title of the chart"
+      },
+      "legendWidth": {
+        "type": "Number",
+        "desc": "The amount of space designated for the legend. Default is 175."
+      },
+      "showLegend": {
+        "type": "Boolean",
+        "desc": "Set to false if the legend should be hidden. Defaults to true."
+      },
+      "hideLegendValues": {
+        "type": "Boolean",
+        "desc": "Set to false if you want to hide the values in the legend. Defaults to true to show the values."
+      },
+      "heightRatio": {
+        "type": "Number",
+        "desc": "The ratio of the height to the width. As the chart's width changes, so will the height if this is set. This value overrides the height property. Must be \"null\" to allow the height property to be expressed."
+      },
+      "height": {
+        "type": "Number",
+        "desc": "the height of the chart. Defaults to 250."
+      },
+      "marginRight": {
+        "type": "Number",
+        "desc": "The margin to the right of the chart in pixels. Defaults to 25."
+      },
+      "marginLeft": {
+        "type": "Number",
+        "desc": "The margin to the left of the chart in pixels. Defaults to 40."
+      },
+      "marginTop": {
+        "type": "Number",
+        "desc": "The margin on the top of the chart in pixels. Defaults to 20."
+      },
+      "marginBottom": {
+        "type": "Number",
+        "desc": "The margin the bottom of the chart in pixels. Defaults to 30."
+      },
+      "minWidth": {
+        "type": "Number",
+        "desc": "The minimum width in pixels that the chart is allowed to reach. Default is 200."
+      },
+      "minHeight": {
+        "type": "Number",
+        "desc": "The minimum height in pixels that the chart is allowed to reach. Default is 150."
+      },
+      "min": {
+        "type": "Number",
+        "desc": "the minimum value on the y axis of the chart"
+      },
+      "max": {
+        "type": "Number",
+        "desc": "the maximum value on the y axis of the chart"
+      },
+      "lineInterpolation": {
+        "type": "String",
+        "desc": "Option between \"cardinal\" (curved line - Default) or \"linear\" (straight line)."
+      },
+      "labelRotation": {
+        "type": "Number",
+        "desc": "The angle that the labels on the x axis should rotate in degrees. Default is 45."
+      },
+      "allowLabelRotation": {
+        "type": "Boolean",
+        "desc": "Set to false if you never want the labels to rotate. Defaults to true."
+      },
+      "alwaysRotateLabels": {
+        "type": "Boolean",
+        "desc": "Set to true if you always want the labels on the x axis to be rotated"
+      },
+      "alwaysShowLastLabel": {
+        "type": "Boolean",
+        "desc": "If the labels on the x axis are able to be reduced, setting this to \"true\" will ensure that the last label is always displayed. Default is false."
+      },
+      "preventXAxisCrowding": {
+        "type": "Boolean",
+        "desc": "Set to false if you don't want the labels on the x axis to be diminished to prevent overcrowding. Default is true."
+      },
+      "verticalLabelPadding": {
+        "type": "Number",
+        "desc": "Sets the minimum pixel space between the rotated labels before they will start diminishing to prevent overcrowding. Default is 15."
+      },
+      "horizontalLabelPadding": {
+        "type": "Number",
+        "desc": "The minimum pixel padding between the labels on the x axis before they are forced to rotate to prevent overcrowding. Default is 10."
+      },
+      "maxLabelCount": {
+        "type": "Number",
+        "desc": "Set if you want there to be a maximum number of labels on the x axis that can be displayed on the chart. Default is null."
+      },
+      "showAxisTickMarks": {
+        "type": "Boolean",
+        "desc": "Set to false if the tick marks are unwanted. Defaults to true."
+      },
+      "showGridLines": {
+        "type": "Boolean",
+        "desc": "Set to false if the grid lines are unwanted. Defaults to true."
+      },
+      "excludeSeries": {
+        "type": "Array",
+        "desc": "A list of the series that you do not want to include in the chart. The array should contain the seriesName or seriesDesc of the series you do not want to include."
+      },
+      "tooltips": {
+        "type": "Boolean",
+        "desc": "Decides if tooltips should be visible on the chart. Default is true."
+      }
+    },
+    "description": "The area chart widget will take a series of data and graph it as a line over time.  Within the JSON data given to the widget you can set a number of properties including the name of each series (seriesDescr) that will be displayed in the legend, the color of the series (seriesStrokeColor) if you want it to be something other than the default, and the value in the legend (legendValue) if it should be something other than the last value in the series. Both charts are using the same data. The top charts takes all of the default values in the metadata while the bottom one has most properties set to display what each option will change. You can see how the chart responds by resizing the window. As you make the window smaller, the top chart will rotate the labels and then start cutting some labels out to prevent overlapping labels. The chart can handle multiple data formats as shown below. "
+  },
+  {
+    "widgetType": "BarChart",
+    "config": [
+      {
+        "fixture": "barChart/barChartData1-1.json"
+      },
+      {
+        "fixture": "barChart/barChartData1-2.json"
+      }
+    ],
+    "widgetProperties": {
+      "labels": {
+        "type": "Array",
+        "desc": "a list of labels for the x-axis if they are not provided in the widget’s JSON data."
+      },
+      "formatString": "(String or Array of Strings) format of the numbers on the axis and legend (see Numeral.js). Default is \"\". As an array the first entry will correspond to the left axis and the second value will correspond to the right axis.",
+      "baseClass": {
+        "type": "String",
+        "desc": "the base class for the widget's div. Default is \"card\" which adds the shading around the chart to create a card effect."
+      },
+      "title": {
+        "type": "String",
+        "desc": "The title of the chart"
+      },
+      "legendWidth": {
+        "type": "Number",
+        "desc": "The amount of space designated for the legend. Default is 175."
+      },
+      "showLegend": {
+        "type": "Boolean",
+        "desc": "Set to false if the legend should be hidden. Defaults to true."
+      },
+      "hideLegendValues": {
+        "type": "Boolean",
+        "desc": "Set to false if you want to hide the values in the legend. Defaults to true to show the values."
+      },
+      "heightRatio": {
+        "type": "Number",
+        "desc": "The ratio of the height to the width. As the chart's width changes, so will the height if this is set. This value overrides the height property. Must be \"null\" to allow the height property to be expressed. Default is 0.5."
+      },
+      "height": {
+        "type": "Number",
+        "desc": "the height of the chart. Defaults to 450."
+      },
+      "marginRight": {
+        "type": "Number",
+        "desc": "The margin to the right of the chart in pixels. Defaults to 20."
+      },
+      "marginLeft": {
+        "type": "Number",
+        "desc": "The margin to the left of the chart in pixels. Defaults to 40."
+      },
+      "marginTop": {
+        "type": "Number",
+        "desc": "The margin to the top of the chart in pixels. Defaults to 20."
+      },
+      "marginBottom": {
+        "type": "Number",
+        "desc": "The margin to the right of the chart in pixels. Defaults to 30."
+      },
+      "minWidth": {
+        "type": "Number",
+        "desc": "The minimum width in pixels that the chart is allowed to reach. Default is 200."
+      },
+      "minHeight": {
+        "type": "Number",
+        "desc": "The minimum height in pixels that the chart is allowed to reach. Default is 150."
+      },
+      "min": {
+        "type": "(Number or Array of Numbers)",
+        "desc": "the minimum value on the y axis of the chart. If an array and there are multiple axes the first entry in the array will relate to the axis on the left and the second one will relate to the axis on the right."
+      },
+      "max": {
+        "type": "(Number or Array of Numbers)",
+        "desc": "the maximum value on the y axis of the chart. If the value is an array, it will behave the same as the \"min\" setting."
+      },
+      "datasetStrokeWidth": {
+        "type": "Number",
+        "desc": "the width of the lines in pixels. Default is 3."
+      },
+      "dashedLines": {
+        "type": "Boolean",
+        "desc": "Sets whether or not you want dashed lines on the chart. Default is true."
+      },
+      "firstSeriesPointDot": {
+        "type": "Boolean",
+        "desc": "Sets whether or not the first line will always have point dots. Default is true."
+      },
+      "lineInterpolation": {
+        "type": "String",
+        "desc": "Option between \"cardinal\" (curved line - Default) or \"linear\" (straight line)."
+      },
+      "pointDot": {
+        "type": "Boolean",
+        "desc": "Set to true if you want the dots to appear on the lines. Default is false."
+      },
+      "pointDotRadius": {
+        "type": "Number",
+        "desc": "The radius of the point dots in pixels. Default is 5."
+      },
+      "labelRotation": {
+        "type": "Number",
+        "desc": "The angle that the labels on the x axis should rotate in degrees. Default is 45."
+      },
+      "allowLabelRotation": {
+        "type": "Boolean",
+        "desc": "Set to false if you never want the labels to rotate. Defaults to true."
+      },
+      "alwaysRotateLabels": {
+        "type": "Boolean",
+        "desc": "Set to true if you always want the labels on the x axis to be rotated"
+      },
+      "showAxisTickMarks": {
+        "type": "Boolean",
+        "desc": "Set to false if the tick marks are unwanted. Defaults to true."
+      },
+      "showGridLines": {
+        "type": "Boolean",
+        "desc": "Set to false if the grid lines are unwanted. Defaults to true."
+      },
+      "barSeriesPadding": {
+        "type": "Number",
+        "desc": "The percent of padding that separates each group of bars. Value should be between 0 and 1. Default is 0.1. "
+      },
+      "barValuePadding": {
+        "type": "Number",
+        "desc": "The percent of padding that separates each individual bar. Value should be between 0 and 1. Default is 0. "
+      },
+      "excludeSeries": {
+        "type": "Array",
+        "desc": "A list of the series that you do not want to include in the chart. The array should contain the seriesName or seriesDesc of the series you do not want to include."
+      },
+      "multipleYAxis": {
+        "type": "Boolean",
+        "desc": "Set to true to display two y axes on the chart. One will be displayed on the left and the other will be on the right."
+      },
+      "chartBarAxis": {
+        "type": "Number",
+        "desc": "If you have multiple y axes, this lets the chart know if the bars should relate to the left (0) or the right (1) y axis. Default is 0."
+      },
+      "chartLineAxis": {
+        "type": "Number",
+        "desc": "With multiple axes, this will let the chart know which axis the lines should relate to. Set to 0 if they should relate to the left axis and 1 if they should relate to the right. Default is 1."
+      },
+      "tooltips": {
+        "type": "Boolean",
+        "desc": "Decides if tooltips should be visible on the chart. Default is true."
+      },
+      "multiYAxis": {
+        "type": "Boolean",
+        "desc": "Set to true if and additional axis on the right is needed which is available if there are both lines and bars on the same chart. Default is false."
+      },
+      "barAxis": {
+        "type": "Number",
+        "desc": "If there are two axis this decides if the bars relate to the left(0) or right(1) axis. Default is 0 which has the bars relate to the left axis."
+      },
+      "lineAxis": {
+        "type": "Number",
+        "desc": "If there are two axis this will decide which axis the lines will relate to. Default is 1 so the lines will relate to the right axis."
+      },
+      "showYAxisLabels": {
+        "type": "Boolean",
+        "desc": "Set to true if yAxis labels are wanted. Defaults to false."
+      },
+      "stackedBars": {
+        "type": "Boolean",
+        "desc": "set to true if the bars should be stacked. Defaults to false."
+      }
+    },
+    "description": "The bar chart widget will take a series of data and graph it as bars or bars and lines. In order to get the data to appear as a line, you have to set the \"chartType\" in the series data to \"line\". You can see how it updates by changing the dropdown in the filter window.  Within the JSON data given to the widget you can set a number of properties including the name of each series (seriesDescr) that will be displayed in the legend, the color of the series (seriesStrokeColor) if you want it to be something other than the default, the value in the legend (legendValue) if it should be something other than the last value in the series, and the axis (axis) that the series should relate to if there should be more than 1 y axis. With the multiple axis selection, all of the lines will relate to the same axis and all of the bars will relate to the other. Both charts are using the same data. The top charts takes all of the default values in the metadata while the bottom one has most properties set to display what each option will change. You can see how the chart responds by resizing the window. As you make the window smaller, the top chart will rotate the labels. The chart can handle multiple data formats as shown below. "
+  },
+  {
+    "widgetType": "BubbleChart",
+    "config": [
+      {
+        "fixture": "scatterPlot/scatterPlotData1-1.json",
+        "widgetProperties": {}
+      },
+      {
+        "fixture": "scatterPlot/scatterPlotData1-1.json",
+        "widgetProperties": {
+          "showYAxis": true,
+          "preventOverlap": false,
+          "colorLegendOnAxis": false,
+          "useChromaColors": false,
+          "showColorLegend": false,
+          "showXGridLines": true,
+          "allowNegatives": true
+        }
+      }
+    ]
+  },
+  {
+    "widgetType": "BubbleLineChart",
+    "config": [
+      {
+        "fixture": "bubbleLineChart/bubbleLineChartData1-1.json"
+      }
+    ]
+  },
+  {
+    "widgetType": "Button",
+    "config": [
+      {
+        "widgetProperties": {
+          "label": "I'm a default button!"
+        }
+      },
+      {
+        "widgetProperties": {
+          "label": "I'm a primary button!",
+          "baseClass" : "primary-button inline-block",
+          "title": "This is my title"
+        }
+      },
+      {
+        "widgetProperties": {
+          "label": "I'm a secondary button!",
+          "secondary": true,
+          "title": "This is my title"
+        }
+      },
+      {
+        "widgetProperties": {
+          "baseClass": "simple-button",
+          "label": "I'm a simple button!",
+          "title": "This is my title"
+        }
+      },
+      {
+        "widgetProperties": {
+          "baseClass": "simple-button",
+          "iconClass": "glyphicon glyphicon-trash",
+          "iconPosition": "right",
+          "label": "I have an icon!",
+          "title": "This is my title"
+        }
+      }
+    ],
+    "widgetProperties": {
+      "label": {
+        "type": "String",
+        "desc": "Label that will be clicked for the button"
+      },
+      "title": {
+        "type": "String",
+        "desc": "the tooltip displayed when holding the cursor over the button"
+      },
+      "confirm": {
+        "type": "String",
+        "desc": "a confirmation message to be displayed before the events are triggered"
+      },
+      "Secondary": {
+        "type": "Boolean",
+        "desc": "whether or not the button is a secondary button. Default is false."
+      },
+      "baseClass": {
+        "type": "String",
+        "desc": "used to change the base class of the button to \"simple-button\". Default is \"button-primary\""
+      },
+      "iconClass": {
+        "type": "String",
+        "desc": "the bootstrap icon class to display a glyphicon"
+      },
+      "iconPosition": {
+        "type": "String",
+        "desc": "The position of the icon relative to the label of the button. Options are \"left\" or \"right\". Default is \"left\"."
+      }
+    },
+    "description": "This is a hyperlinked word that is used as a button. The first button on the page is the default with a label set while the second button has secondary set to true and a title on hover. The third button has its baseClass set to \"simple-button\". There is also a setDisabled function that accepts a boolean to set a button as disabled or enabled as shown by the last demo."
+  },
+  {
+    "widgetType": "Calendar",
+    "config": [
+      {
+        "fixture": "calendar/calendarData1-1.json",
+        "widgetProperties": { }
+      }
+    ],
+    "widgetProperties": { },
+    "description": ""
+  },
+  {
+    "widgetType": "ChartGrid",
+    "config": [
+      {
+        "fixture": "chartGrid/chartGridData1-1.json",
+        "widgetProperties": {
+          "columns": {
+            "gridChartColumn": {
+              "index": 2,
+              "widget": {
+                "widgetProperties": {
+                  "columns": {
+                    "age": {
+                      "index": 2,
+                      "name": "Age",
+                      "sortable": true
+                    },
+                    "livesleft": {
+                      "index": 3,
+                      "name": "Lives Left",
+                      "sortable": true
+                    },
+                    "name": {
+                      "columnClass": "hyperlink",
+                      "index": 1,
+                      "name": "Name",
+                      "sortable": true
+                    }
+                  }
+                },
+                "widgetType": "GridTable"
+              }
+            },
+            "lineChartColumn": {
+              "index": 1,
+              "widget": {
+                "widgetProperties": {
+                  "legendWidth": 145
+                },
+                "widgetType": "MeasureTrendChart"
+              }
+            }
+          }
+        }
+      },
+      {
+        "fixture": "chartGrid/chartGridData2-1.json",
+        "widgetProperties": {
+          "additionalBaseClass": "x3",
+          "baseClass": "",
+          "columns": {
+            "imageGrid": {
+              "widget": {
+                "widgetType": "Image"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "widgetProperties": {
+      "additionalBaseClass": {
+        "type": "String",
+        "desc": "lets the chart know how many rows across to make the grid.  This property can be assigned \"x3\" for a grid that is three across, \"x4\" for a grid that is 4 across, etc. "
+      },
+      "baseClass": {
+        "type": "String",
+        "desc": ": sets the class that determines whether the charts are in a shaded container.  The default is \"chart-grid-container shady-container\" which has the repeated widgets inside a shaded container.  Setting baseClass to \"\" will remove the shaded area."
+      },
+      "columns": {
+        "type": "Object",
+        "desc": "lets the chart grid know what data in the JSON will be repeated in the chart.  Each block on the chart grid is considered a column. "
+      }
+    },
+    "description": "A chart gird will allow you to repeat any widget or widgets multiple times to make a grid. The \"rows\" of the chart grid are the individual blocks while the \"columns\" are the separate items within each box. In order to create a chart grid, you have to set the columns property by creating a column with a name that will be referenced in the JSON data and setting the columns widget property with the widget type. A simple example of this is shown below. All of the widget properties for the widget(s) that is/are repeated can also be set. See the specific widget documentation for more information about the widget properties. The top chart grid with the two measure trend charts and grid tables shows the default settings while the bottom chart grid with the six images shows the baseClass set to \"\" and the additionalBaseClass set to \"x3\" to display the grid with three images across."
+  },
+  {
+    "widgetType": "ToggleBarContainer",
+    "config": [
+      {
+        "widgetProperties": {
+          "toggleBarBaseClass": "tab-bar"
+        }
+      },
+      {
+        "widgetProperties": {
+          "toggleBarBaseClass": "tab-bar-simple"
+        }
+      },
+      {
+        "widgetProperties": {
+          "toggleBarBaseClass": "toggle-button-bar toggle-single-display"
+        }
+      }
+    ],
+    "widgetProperties": {
+      "toggleBarBaseClass": {
+        "type": "String",
+        "desc": "the base class for the toggle on the right.  The options are the same as they are for the toggle bar widget.  You can use \"toggle-button-bar\" (default), \"tab-bar\", \"tab-bar-simple\", or \"toggle-button-bar toggle-single-display\" as shown above in the corresponding order."
+      }
+    },
+    "description": "This is a container used when you want to toggle between different screens.  You need to add a property to the widgets inside the toggle bar container called \"containerTitle\".  This will give the titles on the right that you can click to toggle between the options and it will be the title that is shown above a grid as displayed when you click \"second\" in this example and you can see the title \"Second\" displayed on the left.  The first part of the top example shows a title bar inside a simple container that is inside the toggle bar container.  The second part of the top example shows a grid table inside the toggle bar container. The rest of the examples on the page have simple containers inside the toggle bar containers. "
+  },
+  {
+    "widgetType": "ChartListToggleBarContainer",
+    "config": [
+      {
+        "fixture": "chartListToggleBarContainer/chartListToggleBarContainerData1-1.json"
+      }
+    ]
+  },
+  {
+    "widgetType": "Checkbox",
+    "config": [
+      {
+        "fixture": "checkbox/checkboxData1-1.json",
+        "widgetProperties": {
+          "label": "Check me"
+        }
+      },
+      {
+        "fixture": "checkbox/checkboxData1-2.json",
+        "widgetProperties": {
+          "label": "Another checkbox label"
+        }
+      }
+    ],
+    "widgetProperties": {
+      "label": {
+        "type": "String",
+        "desc": "The label for the checkbox"
+      },
+      "labelPosition": {
+        "type": "String",
+        "desc": "either \"right\" of \"left\" depending on which side of the checkbox you want the label to reside"
+      },
+      "value": {
+        "type": "String",
+        "desc": "the value for the \"value\" property of an html checkbox"
+      },
+      "name": {
+        "type": "String",
+        "desc": "this value for the \"name\" property of an html checkbox"
+      },
+      "selected": {
+        "type": "Boolean",
+        "desc": "what the default value should be for the checkbox.  Defualt is set to false"
+      },
+      "disabled": {
+        "type": "Boolean",
+        "desc": "whether the checkbox should be disabled on the screen"
+      }
+    },
+    "description": "This widget is a basic html checkbox.  The top checkbox shows all the default values with the label property set to \"Checkbox 1\".  The bottom checkbox has disabled set to \"true\" and labelPosition set to \"left\"."
+  },
+  {
+    "widgetType": "ComparativeBoxPlot",
+    "config": [
+      {
+        "fixture": "comparativeBoxPlot/comparativeBoxPlotData1-1.json",
+        "widgetProperties": {
+          "derivedBenchmarkThreshold": 0.5
+        }
+      },
+      {
+        "fixture": "comparativeBoxPlot/comparativeBoxPlotData2-1.json"
+      },
+      {
+        "fixture": "comparativeBoxPlot/comparativeBoxPlotData5-1.json"
+      },
+      {
+        "fixture": "comparativeBoxPlot/comparativeBoxPlotData3-1.json",
+        "widgetProperties": {
+          "animation": false,
+          "lowerIsBetter": false,
+          "minIsNegativeMax": true,
+          "numSteps": 7,
+          "step": 10,
+          "thresholdLabel": "Threshold"
+        }
+      },
+      {
+        "fixture": "comparativeBoxPlot/comparativeBoxPlotData6-1.json",
+        "widgetProperties": {
+          "baseClass": "deciles-graph",
+          "tickMarks": ["", "", "", 0, 1, 2, 3, 4, 5, 6],
+          "benchmarkFills":["#ddd","#ddd","#ddd", "#64cbfc", "#64cbfc", "#64cbfc", "#64cbfc", "#64cbfc", "#64cbfc", "#64cbfc"],
+          "formatString": "0.00",
+          "derivedBenchmarkThreshold": 0.5
+        }
+      }
+    ],
+    "widgetProperties": {
+      "step": {
+        "type": "Number",
+        "desc": "the space between each tick on the axis.  Can be set in the widget properties or the JSON data for the widget.  Defaults to 0.2."
+      },
+      "numSteps": {
+        "type": "Number",
+        "desc": "the number of ticks you want on the axis which will override \"step\""
+      },
+      "formatString": {
+        "type": "String",
+        "desc": "format of the numbers on the axis (see Numeral.js)"
+      },
+      "tickMarks": {
+        "type": "Boolean",
+        "desc": "whether or not the ticks will be displayed on the box plot.  Defaults to true."
+      },
+      "lowerIsBetter": {
+        "type": "Boolean",
+        "desc": "shows a gradient from red to green if false and green to red if true.  Default is null."
+      },
+      "animation": {
+        "type": "Boolean",
+        "desc": "if the chart should be animated upon loading.  Defaults to true."
+      },
+      "thresholdLabel": {
+        "type": "String",
+        "desc": "Labels for the threshold tick(s). Can be set in the metadata or the data for the widget.  Defaults to \"\"."
+      },
+      "minIsNegativeMax": {
+        "type": "Boolean",
+        "desc": "will make the minimum value to negative of the max value.  Defaults to false."
+      },
+      "derivedBenchmarkThreshold": {
+        "type": "Number",
+        "desc": "the place where you want either the floor or ceiling to be.  If less than the actual value, the floor will be set to the derivedBenchmarkThreshold and the ceiling will be the actual value, if larger than the actual value, the ceiling will be set to the derivedBenchmarkThreshold and floor will be set to the actual value.  This is shown in the first example.  Defaults to null."
+      }
+    },
+    "description": "The comparative box plot can be used in many ways to show a comparison of a value to a range of values.  The legend on the top has been added by adding a \"ComparativeBoxPlotLegend\" to the screen.  No other data is needed to render the legend.  The first example show setting only the actual value, threshold (to show the big vertical line), and derivedBenchmarkThreshold.  It uses the default min, max, and format string.  The second example shows everything that you can set in the JSON data for the widget but doesn’t have anything in the widget properties of the metadata.  The last example shows what can be set in the metadata minus tickMarks.  The box plot is great to use in grid tables.  For more information about how to add them into the grid table, please click the table on this page or the grid table from the home screen. "
+  },
+  {
+    "widgetType": "Content",
+    "config": [
+      {
+        "fixture": "content/contentData.json"
+      }
+    ],
+    "widgetProperties": {
+      "handelAs": {
+        "type": "String",
+        "desc": "optional; the type of content being retrieved (Ex: \"text\" or \"html\")"
+      },
+      "iframed": {
+        "type": "Boolean",
+        "desc": "true if the service/fixture url should be the source of an iframe for this content (defaults to false)"
+      },
+      "decode": {
+        "type": "Boolean",
+        "desc": "true if the data should be HTML decoded. ****BE CAREFUL TO NEVER USE THIS OPTION WITH USER-DEFINED CONTENT TO PREVENT HACKING!!"
+      },
+      "options": {
+        "type": "Object",
+        "desc": "a key (String)/value map that if set will be used to dynamically select the content based on the data value provided e.g. given options = {true : \"<span>Hello</span>\", false : \"\"} and data = true, content = <span>Hello</span> *Note key values must be strings"
+      }
+    },
+    "description": "Allows you to add text or html content to the screen. The content can be sourced from a service (or fixture) url and injected into the page or it can be embedded within an iframe."
+  },
+  {
+    "widgetType": "DateTimePicker",
+    "config": [
+      {
+        "fixture": "dateTimePicker/dateTimePickerStart.json"
+      }
+    ],
+    "widgetProperties": {
+      "dateViewMode": {
+        "type": "String",
+        "desc": " The default view to display when the picker is shown. Accepts 'decades','years','months','days'. Default is \"days\" Note: To limit the picker to selecting, for instance the year and month, use dateFormat : MM/YYYY "
+      },
+      "dateFormat": {
+        "type": "String",
+        "desc": "Restricts the allowed date formats that can be selected. Default is 'M/D/YYYY'. Options: http://momentjs.com/docs/#/displaying/format/ Note to only allow year/month selection, use 'MM/YYYY'"
+      },
+      "valueFormat": {
+        "type": "String",
+        "desc": "Formats the selected date value into a string specified by the valueFormat. Default is 'MM/DD/YYYY'. See https://momentjs.com/docs/#/displaying/format/. If valueFormat === \"\", moment().toString() will be used"
+      },
+      "minDate": {
+        "type": "(Boolean|String)",
+        "desc": "False if no min; otherwise provide a min date. Default is false."
+      },
+      "maxDate": {
+        "type": "(Boolean|String)",
+        "desc": "False if no min; otherwise provide a max date. Default is false."
+      },
+      "disabled": {
+        "type": "Boolean",
+        "desc": "If set to true, the date time picker will be greyed out. Default is false."
+      },
+      "disabledDates": {
+        "type": "(Boolean|String)",
+        "desc": "Disables the dates that are in an array. Accepts array of [date, moment, string]. Default is false."
+      },
+      "enabledDates": {
+        "type": "(Boolean|String)",
+        "desc": "Disables selection of dates NOT in the array. Accepts array of [date, moment, string]. Default is false."
+      },
+      "startOf": {
+        "type": "String",
+        "desc": "A momentjs property that sets the date to the start of a given unit of time. Default is null. Accepts \"day\", \"week\", \"month\", \"year\"."
+      },
+      "endOf": {
+        "type": "String",
+        "desc": "A momentjs property that sets the date to the end of a given unit of time. Default is null. Accepts \"day\", \"week\", \"month\", \"year\"."
+      },
+      "defaultDate": {
+        "type": "(Boolean|String)",
+        "desc": "If false, the current date is set otherwise provide a default date. Default is false. "
+      },
+      "value": {
+        "type": "(Boolean|String)",
+        "desc": "Synonym for defaultDate; will override if specified"
+      },
+      "valueProp": {
+        "type": "String",
+        "desc": "The variable name that the data is using to define the value. Default is \"value\"."
+      },
+      "noDefault": {
+        "type": "Boolean",
+        "desc": "True if there should be no default value specified in the box. Default is false."
+      },
+      "defaultDateOffsetMillis": {
+        "type": "Number",
+        "desc": " A number of milliseconds that will be subtracted from the current time to set the default date. This can configure the default date as 1 month ago. use negative values to move forward in time. Note this value will be ignored if defaultDate is specified "
+      },
+      "useCurrent": {
+        "type": "Boolean",
+        "desc": "True if the current date should be used; false otherwise. Overridden by defaultDate and defaultDateOffsetMillis"
+      },
+      "label": {
+        "type": "String",
+        "desc": "The label for the widget. Default is null."
+      },
+      "dispatchInitialChange": {
+        "type": "Boolean",
+        "desc": "Whether or not the widget should dispatch a change even on first load. Default is true."
+      },
+      "focusOnShow": {
+        "type": "Boolean",
+        "desc": "Fixes an issue where the keyboard on an Android device would pop up on click of the calendar and make the calendar flicker then disappear"
+      }
+    },
+    "description": "This widget can be used on it's own, in a form, or as a filter. The first widget is taking all of the default values. You can link them together as shown in the last two widgets to set each other's min and max data selection. For more information about the options available visit the Bootstrap Datetimepicker documentation here."
+  },
+  {
+    "widgetType": "DomainItem",
+    "config": [
+      {
+        "fixture": "domainItem/domainItemData1-1.json"
+      },
+      {
+        "fixture": "domainItem/domainItemData2-1.json"
+      }
+    ],
+    "widgetProperties": {
+      "domainsDrillable": {
+        "type": "Boolean",
+        "desc": "whether or not the title part of the domain item should be clickable. Defaults to false."
+      }
+    },
+    "description": "Shows a list of measure items and/or summary items. The title of the list can be set by setting the \"domainDesc\" and timeframes can be added by giving an array of timeframe objects to \"timeframes\" (See the timeframe documentation for more information). This title can be clickable by setting domainsDrillable to true as shown by the chart on the right. The example on the left shows a summary item vs all of the statusId options available for a measure item. For more information about what can be included in a summary item or a measure item, please see the summary bar item or measure item documentation. The domainIds and ids are used in the html for control by css."
+  },
+  {
+    "widgetType": "DomainItemOverview",
+    "config": [
+      {
+        "fixture": "domainItemOverview/domainItemOverviewData1-1.json"
+      }
+    ]
+  },
+  {
+    "widgetType": "DomainSummary",
+    "config": [
+      {
+        "fixture": "domainSummary/domainSummaryData1-1.json"
+      }
+    ],
+    "widgetProperties": {
+      "overviewToggleBarTitle": {
+        "type": "String",
+        "desc": "the title of the legend at the top of the domain summary. This is overridden by the overview title in the widget’s JSON data. Defaults to \"Measures Performance Contribution\"."
+      },
+      "scoreHeader": {
+        "type": "String",
+        "desc": "the title of the score at the top of each domain item. Defaults to \"Raw Score\"."
+      },
+      "weightedPointsLabel": {
+        "type": "Srting",
+        "desc": "the title of the weighted points section of each domain item. Defaults to \"Weighted Points\"."
+      },
+      "showWeightedPoints": {
+        "type": "Boolean",
+        "desc": "whether or not the weighted points portion of the domain item will be shown. Defaults to true showing the weighted points section."
+      },
+      "domainsGrouped": {
+        "type": "Boolean",
+        "desc": "decides whether or not the domain summary should follow the grouping provided to it. Defaults to true following the grouping specified."
+      },
+      "maxDomainColumns": {
+        "type": "Number",
+        "desc": "the maximum number of columns in the domain summary. Defaults to 4."
+      }
+    },
+    "description": "A domain summary will create an organized grouping of multiple domain items. It will also add an overview toggle bar (legend) to the top of the domain summary that counts how many items there are with each status. For more information about each box in the domain summary, please see the domain item documentation."
+  },
+  {
+    "widgetType": "DonutChart",
+    "config": [
+      {
+        "fixture": "donutChart/donutChartData1-1.json"
+      },
+      {
+        "fixture": "donutChart/donutChartData1-2.json"
+      },
+      {
+        "fixture": "donutChart/donutChartData1-3.json",
+        "widgetProperties": {
+          "centerValueFormatString": "$0.00a"
+        }
+      }
+    ],
+    "widgetProperties": {
+      "labels": {
+        "type": "Array",
+        "desc": "A list of labels for the x-axis if they are not provided in the widget’s JSON data"
+      },
+      "formatString": {
+        "type": "String",
+        "desc": "Format of the numbers on the axis and legend (see Numeral.js). Default is \"\""
+      },
+      "height": {
+        "type": "Number",
+        "desc": "The height and width of the donut. Default is 200."
+      },
+      "baseClass": {
+        "type": "String",
+        "desc": "The base class for the widget's div. Default is \"\". The base class \"card\" adds the shading around the chart to create a card effect"
+      },
+      "title": {
+        "type": "String",
+        "desc": "The title of the chart"
+      },
+      "legendWidth": {
+        "type": "Number",
+        "desc": "The amount of space designated for the legend. Default is 175."
+      },
+      "legendPosition": {
+        "type": "String",
+        "desc": "Decides whether the position of the legend should be displayed on the bottom or to the right of the donut chart. Default is \"bottom\"."
+      },
+      "showLegend": {
+        "type": "Boolean",
+        "desc": "Set to false if the legend should be hidden. Defaults to true."
+      },
+      "displayTotal": {
+        "type": "Boolean",
+        "desc": "Set to false if the total should not be displayed in the center of the donut. Defaults to true."
+      },
+      "tooltips": {
+        "type": "Boolean",
+        "desc": "Decides if tooltips should be visible on the chart. Default is true."
+      },
+      "hideTooltipValues": {
+        "type": "Boolean",
+        "desc": "Set to true if the values should not be included in the tooltip. Default is false."
+      }
+    },
+    "description": "This widget will take a series of numbers with coordinating labels and graph them as a donut chart. Both the top and bottom charts are using the same data. Their metadata however is different in order to display many of the functionalities of the charts. The top chart takes all the defaults while the bottom one sets customizations. The two data selections show two ways of formatting the data for the chart. "
+  },
+  {
+    "widgetType": "FileUpload",
+    "config": [
+      {
+        "widgetProperties": {
+          "acceptPattern": ".jpg,.gif,.png",
+          "actionUrl": "",
+          "includeSubmit": true,
+          "prompt": "Upload a picture of your cat",
+          "submitLabel": "Submit!"
+        }
+      }
+    ],
+    "widgetProperties": {
+      "prompt": {
+        "type": "String",
+        "desc": "The label above the upload input box. Defaults to \"Browse for a file:\"."
+      },
+      "actionUrl": {
+        "type": "String",
+        "desc": "The url the file should be posted to. Defaults to \"\"."
+      },
+      "acceptPattern": {
+        "type": "String",
+        "desc": "the valid file extensions to be allowed. Defaults to \".txt, .xls, .xlsx\". Note that this is not honored by all browsers"
+      },
+      "submitLabel": {
+        "type": "String",
+        "desc": "the label for the submit button. Defaults to \"Upload\"."
+      },
+      "includeSubmit": {
+        "type": "Boolean",
+        "desc": "whether or not to include the submit button. Defaults to false."
+      }
+    },
+    "description": "This widget is the basic html file upload. The actionUrl is a normal form url and the acceptPattern should be a comma-separated list of file extension. For example \".txt,.xlx,.xlsx\""
+  },
+  {
+    "widgetType": "Form",
+    "config": [
+      {
+        "fixture": "form/formData1-1.json",
+        "widgetProperties": {
+          "baseClass": "simple-form short-form",
+          "enableSubmit": true,
+          "enableIncompleteSubmit" : true
+        }
+      },
+      {
+        "fixture": "form/formData1-1.json",
+        "widgetProperties": {
+          "baseClass": "simple-form short-form",
+          "enableSubmit": true,
+          "resetOnPersistedSuccess": true,
+          "resetOnSubmit": false,
+          "submitLabel": "Submit",
+          "sectionWizardStyle": true,
+          "instructions": "Please make a selection for each question below"
+        }
+      }
+    ]
+  },
+  {
+    "widgetType": "GaugeChart",
+    "config": [
+      {
+        "fixture": "gaugeChart/gaugeChartData1-1.json"
+      }
+    ]
+  },
+  {
+    "widgetType": "GridButton",
+    "config": [
+      {
+        "fixture": "gridButton/gridButtonData1-2.json",
+        "widgetProperties": {
+          "buttonClass": "simple-button",
+          "perItemLabels": true
+        }
+      }
+    ],
+    "widgetProperties": {
+      "label": {
+        "type": "String",
+        "desc": "Label that will be clicked for the grid button"
+      },
+      "buttonClass": {
+        "type": "String",
+        "desc": "the base class for the button. Choices between \"button-primary\", \"button-secondary\", and \"simple-button\". Defaults to \"button-primary\". "
+      },
+      "perItemLabels": {
+        "type": "Boolean",
+        "desc": "decides whether to use the \"label\" property in the metadata for the label or the property that was set in the widget data. Defaults to false."
+      }
+    },
+    "description": "This is a button that goes inside of grids. The visibility is controlled by the data, which is either a Boolean value, a string, or a combination of the two. The grid buttons are the rightmost column on the example above underneath the \"More Info\" column. Notice that some cats don’t have more information and thus their buttons are disabled in the data. The baseClass for the gridButton are the same as the button widget. There are two different ways to display the button inside the grid as shown below."
+  },
+  {
+    "widgetType": "GridTable",
+    "config": [
+      {
+        "fixture": "gridTable/gridTableData1-1.json",
+        "widgetProperties": {
+          "hasExpandingRows" : true,
+          "valueProp" : "id",
+          "freezeHeader" : true,
+          "clientFilteringEnabled" : true,
+          "columnTypes": {
+            "sparkBar": {
+              "columnFormat" : {
+                "percentWidth" : 40
+              },
+              "widget": {
+                "widgetType": "SparkBarChart"
+              }
+            }
+          }
+        }
+      },
+      {
+        "fixture": "gridTable/gridTableData1-2.json",
+        "widgetProperties": {
+          "freezeHeader" : true,
+          "clientFilteringEnabled" : true,
+          "columnTypes": {
+            "sparkBarOrangeDollar": {
+              "widget": {
+                "widgetProperties": {
+                  "displayOriginalValue": true,
+                  "barColor": "#ffb819",
+                  "includeTextValue": true,
+                  "baseClass": "full-height-bar",
+                  "formatString": "($0,0)"
+                },
+                "widgetType": "SparkBarChart"
+              }
+            },
+            "sparkBarOrangePer": {
+              "widget": {
+                "widgetProperties": {
+                  "displayOriginalValue": true,
+                  "barColor": "#ffb819",
+                  "includeTextValue": true,
+                  "baseClass": "full-height-bar",
+                  "formatString": "0.00%"
+                },
+                "widgetType": "SparkBarChart"
+              }
+            },
+            "sparkBarGreen": {
+              "widget": {
+                "widgetProperties": {
+                  "displayOriginalValue": true,
+                  "barColor": "#bada55",
+                  "includeTextValue": true,
+                  "baseClass": "full-height-bar",
+                  "formatString": "0,0"
+                },
+                "widgetType": "SparkBarChart"
+              }
+            },
+            "sparkBarSeaDollar": {
+              "widget": {
+                "widgetProperties": {
+                  "displayOriginalValue": true,
+                  "barColor": "#50e3c2",
+                  "includeTextValue": true,
+                  "baseClass": "full-height-bar",
+                  "formatString": "($0,0)"
+                },
+                "widgetType": "SparkBarChart"
+              }
+            },
+            "sparkBarSeaPer": {
+              "widget": {
+                "widgetProperties": {
+                  "displayOriginalValue": true,
+                  "barColor": "#50e3c2",
+                  "includeTextValue": true,
+                  "baseClass": "full-height-bar",
+                  "formatString": "0.00%"
+                },
+                "widgetType": "SparkBarChart"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "widgetProperties": {
+      "columns": {
+        "type": "Object",
+        "desc": "descriptions for each column and the type of data/widget used to render them"
+      },
+      "data": {
+        "type": "Array",
+        "desc": "the data for each column"
+      },
+      "defaultColumnMinWidth": {
+        "type": "Number",
+        "desc": "the default column min width; used for responsive behavior"
+      },
+      "columnPadding": {
+        "type": "Number",
+        "desc": "the amount of horizontal padding between columns; used for responsive behavior"
+      },
+      "freezeHeader": {
+        "type": "Boolean",
+        "desc": "decides whether or not the headers will stick to the top of the scroll window when scrolling"
+      },
+      "hideLabelInTooltip": {
+        "type": "Boolean",
+        "desc": "hides the column name in the tooltip if set to true"
+      },
+      "hasExpandingRows": {
+        "type": "Boolean",
+        "desc": "If set to true, the table will add an expanding rows column and an expand button will appear for all rows where the expand column is set to true."
+      },
+      "allRowsExpandable": {
+        "type": "Boolean",
+        "desc": "If set to true, all the rows in the table (excluding children) will be expandable.  If a row has the data for that column set to false, that row will not have an expand button"
+      },
+      "expandColumnName": {
+        "type": "String",
+        "desc": "the name of the column that hs the expand button to expand the rows"
+      },
+      "restrictOneRowExpand": {
+        "type": "Boolean",
+        "desc": "set to true if you want an expanded row to collapse when another row is expanded"
+      },
+      "stopPropagationOnRowClick": {
+        "type": "Boolean",
+        "desc": "if true, a row click will stop all events for the nested custom widgets"
+      }
+    },
+    "description": "The columns in this chart can be created using the metadata manager or by editing the raw metadata JSON file.   The column names should correspond to the JSON data.  Each column has the ability to be sorted by setting the sortable property in the metadata.  Note that the first two columns in the example are sortable while the last two are not.  There is a \"rowClass\" property for rows that you would like to apply specify specific CSS to. This can be seen in the example JSON data and the example CSS provided. If you would like to add a widget such as the spark bar chart shown in the example above, you can define the \"columnTypes\" in the metadata and then assign the column with the widget the corresponding chart type.  This is especially convenient when you want multiple columns to contain the same widget because you only have to define one column type for all the columns to use.  An example of using the chartTypes is given below along with how it would look in the JSON data for the widget.  For more information about the widget used inside the table, please see the Spark Bar Chart section of the documentation by clicking on the chart."
+  },
+  {
+    "widgetType": "HorizontalBarChart",
+    "config": [
+      {
+        "fixture": "horizontalBarChart/horizontalBarChartData1-1.json"
+      },
+      {
+        "fixture": "horizontalBarChart/horizontalBarChartData1-2.json"
+      },
+      {
+        "fixture": "horizontalBarChart/horizontalBarChartData1-3.json",
+        "widgetProperties": {
+          "stackedBars": true,
+          "formatString": "0.0a",
+          "showLegend": false
+        }
+      }
+    ],
+    "widgetProperties": {
+      "labels": {
+        "type": "Array",
+        "desc": "a list of labels for the x-axis if they are not provided in the widget’s JSON data"
+      },
+      "formatString": {
+        "type": "String",
+        "desc": "format of the numbers on the axis and legend (see Numeral.js). Default is \"\""
+      },
+      "baseClass": {
+        "type": "String",
+        "desc": "the base class for the widget's div. Default is \"card\" which adds the shading around the chart to create a card effect"
+      },
+      "title": {
+        "type": "String",
+        "desc": "The title of the chart"
+      },
+      "legendWidth": {
+        "type": "Number",
+        "desc": "The amount of space designated for the legend. Default is 175."
+      },
+      "showLegend": {
+        "type": "Boolean",
+        "desc": "Set to false if the legend should be hidden. Defaults to true."
+      },
+      "hideLegendValues": {
+        "type": "Boolean",
+        "desc": "Set to false if you want to hide the values in the legend. Defaults to true to show the values."
+      },
+      "heightRatio": {
+        "type": "Number",
+        "desc": "The ratio of the height to the width. As the chart's width changes, so will the height if this is set. This value overrides the height property. Must be \"null\" to allow the height property to be expressed."
+      },
+      "height": {
+        "type": "Number",
+        "desc": "the height of the chart. Defaults to 250."
+      },
+      "growChartHeight": {
+        "type": "Boolean",
+        "desc": "Decides whether or not the chart height will grow and shrick as data is entered and removed. Default is true."
+      },
+      "marginRight": {
+        "type": "Number",
+        "desc": "The margin to the right of the chart in pixels. Defaults to 25."
+      },
+      "marginLeft": {
+        "type": "Number",
+        "desc": "The margin to the left of the chart in pixels. Defaults to 40."
+      },
+      "marginTop": {
+        "type": "Number",
+        "desc": "The margin on the top of the chart in pixels. Defaults to 20."
+      },
+      "marginBottom": {
+        "type": "Number",
+        "desc": "The margin the bottom of the chart in pixels. Defaults to 30."
+      },
+      "minWidth": {
+        "type": "Number",
+        "desc": "The minimum width in pixels that the chart is allowed to reach. Default is 200."
+      },
+      "minHeight": {
+        "type": "Number",
+        "desc": "The minimum height in pixels that the chart is allowed to reach. Default is 150."
+      },
+      "min": {
+        "type": "Number",
+        "desc": "the minimum value on the y axis of the chart"
+      },
+      "max": {
+        "type": "Number",
+        "desc": "the maximum value on the y axis of the chart"
+      },
+      "yAxisLabelPadding": {
+        "type": "Number",
+        "desc": "The minimum number of pixels between each value on the x axis before the scale starts removing values. Default is 20."
+      },
+      "showAxisTickMarks": {
+        "type": "Boolean",
+        "desc": "Set to false if the tick marks are unwanted. Defaults to true."
+      },
+      "showGridLines": {
+        "type": "Boolean",
+        "desc": "Set to false if the grid lines are unwanted. Defaults to true."
+      },
+      "excludeSeries": {
+        "type": "Array",
+        "desc": "A list of the series that you do not want to include in the chart. The array should contain the seriesName or seriesDesc of the series you do not want to include."
+      },
+      "tooltips": {
+        "type": "Boolean",
+        "desc": "Decides if tooltips should be visible on the chart. Default is true."
+      },
+      "drawNegativesLeftToRight": {
+        "type": "Boolean",
+        "desc": "Must also set allowNegatives: true. If set to true and only negative values are given, the axis will draw max to min instead of min to max. If set to true and positives and negatives are given, it will be ignored."
+      },
+      "drawYAxisLabelsInsideChart": {
+        "type": "Boolean",
+        "desc": "Moves the y axis labels inside of the chart to be displayed on top of the bars"
+      }
+    },
+    "description": "The horizontal bar chart widget will graph horizontal bars while growing and shrinking as needed. Both the top and bottom charts are using the same data. Their metadata however is different to display many of the functionalities of the charts. The top chart takes all the defaults while the bottom one sets customizations. "
+  },
+  {
+    "widgetType": "Image",
+    "config": [
+      {
+        "widgetProperties": {
+          "imgSrc": "https://s.graphiq.com/sites/default/files/stories/t2/tiny_cat_12573_8950.jpg"
+        }
+      }
+    ],
+    "widgetProperties": {
+      "imgSrc": {
+        "type": "String",
+        "desc": "the location of the image to be used. This can be a url or path in the project"
+      }
+    }
+  },
+  {
+    "widgetType": "InfoIconTooltip",
+    "config": [
+      {
+        "fixture": "infoIconTooltip/infoIconTooltipData1-1.json",
+        "widgetProperties": {
+          "infoDesc": "Description",
+          "infoValue": 0.0,
+          "formatString": "0.0",
+          "tooltipText": "I'm text in a tooltip"
+        }
+      }
+    ],
+    "widgetProperties": {
+      "showInfoDesc": {
+        "type": "Boolean",
+        "desc": "Whether or not the info description should be visible. Default is \"true\""
+      },
+      "showInfoValue": {
+        "type": "Boolean",
+        "desc": "Whether or not the info value should be visible. Default is \"true\""
+      },
+      "infoDesc": {
+        "type": "String",
+        "desc": "The words that can be displayed before the info value and info icon. "
+      },
+      "infoValue": {
+        "type": "Number",
+        "desc": "The value that will be displayed in between the info description and the info icon. "
+      },
+      "tooltipText": {
+        "type": "String",
+        "desc": "The information to be displayed in the tooltip. This text is treated as html and can be formatted with html tags."
+      },
+      "target": {
+        "type": "String",
+        "desc": "The css selector for the widget that the info icon tooltip will be attached to. Ex: \".measureTrendChartDemo\""
+      },
+      "noValuePlaceholder": {
+        "type": "String",
+        "desc": "The placeholder for the info value if there is no data. Default is \"--\""
+      },
+      "formatString": {
+        "type": "String",
+        "desc": "format of the numbers on the axis and legend (see Numeral.js). Default is \"\""
+      }
+    },
+    "description": "A info icon tooltip is a widget that can be anchored to the top right corner of any other widget by simply supplying the widget name to the target property. On mouseover, it can display additional information in tooltip form. The first demo shows the widget by itself with all values set in the metadata. The second example shows the widget attached to a measure trend chart with all the information set in the widget data."
+  },
+  {
+    "widgetType": "LineChart",
+    "config": [
+      {
+        "fixture": "lineChart/lineChartData1-1.json"
+      },
+      {
+        "fixture": "lineChart/lineChartData1-2.json"
+      }
+    ],
+    "widgetProperties": {
+      "labels": {
+        "type": "Array",
+        "desc": "a list of labels for the x-axis if they are not provided in the widget’s JSON data"
+      },
+      "formatString": {
+        "type": "String",
+        "desc": "format of the numbers on the axis and legend (see Numeral.js). Default is \"\""
+      },
+      "baseClass": {
+        "type": "String",
+        "desc": "the base class for the widget's div. Default is \"card\" which adds the shading around the chart to create a card effect"
+      },
+      "title": {
+        "type": "String",
+        "desc": "The title of the chart"
+      },
+      "legendWidth": {
+        "type": "Number",
+        "desc": "The amount of space designated for the legend. Default is 175."
+      },
+      "showLegend": {
+        "type": "Boolean",
+        "desc": "Set to false if the legend should be hidden. Defaults to true."
+      },
+      "hideLegendValues": {
+        "type": "Boolean",
+        "desc": "Set to false if you want to hide the values in the legend. Defaults to true to show the values."
+      },
+      "heightRatio": {
+        "type": "Number",
+        "desc": "The ratio of the height to the width. As the chart's width changes, so will the height if this is set. This value overrides the height property. Must be \"null\" to allow the height property to be expressed."
+      },
+      "height": {
+        "type": "Number",
+        "desc": "the height of the chart. Defaults to 250."
+      },
+      "marginRight": {
+        "type": "Number",
+        "desc": "The margin to the right of the chart in pixels. Defaults to 25."
+      },
+      "marginLeft": {
+        "type": "Number",
+        "desc": "The margin to the left of the chart in pixels. Defaults to 40."
+      },
+      "marginTop": {
+        "type": "Number",
+        "desc": "The margin on the top of the chart in pixels. Defaults to 20."
+      },
+      "marginBottom": {
+        "type": "Number",
+        "desc": "The margin the bottom of the chart in pixels. Defaults to 30."
+      },
+      "minWidth": {
+        "type": "Number",
+        "desc": "The minimum width in pixels that the chart is allowed to reach. Default is 200."
+      },
+      "minHeight": {
+        "type": "Number",
+        "desc": "The minimum height in pixels that the chart is allowed to reach. Default is 150."
+      },
+      "min": {
+        "type": "Number",
+        "desc": "the minimum value on the y axis of the chart"
+      },
+      "max": {
+        "type": "Number",
+        "desc": "the maximum value on the y axis of the chart"
+      },
+      "datasetStrokeWidth": {
+        "type": "Number",
+        "desc": "the width of the lines in pixels. Default is 3."
+      },
+      "lineInterpolation": {
+        "type": "String",
+        "desc": "Option between \"cardinal\" (curved line - Default) or \"linear\" (straight line)."
+      },
+      "pointDot": {
+        "type": "Boolean",
+        "desc": "Set to true if you want the dots to appear on the lines. Default is false."
+      },
+      "pointDotRadius": {
+        "type": "Number",
+        "desc": "The radius of the point dots in pixels. Default is 5."
+      },
+      "firstSeriesPointDot": {
+        "type": "Boolean",
+        "desc": "Set to false if the first line should not have dots. Default is true. "
+      },
+      "labelRotation": {
+        "type": "Number",
+        "desc": "The angle that the labels on the x axis should rotate in degrees. Default is 45."
+      },
+      "allowLabelRotation": {
+        "type": "Boolean",
+        "desc": "Set to false if you never want the labels to rotate. Defaults to true."
+      },
+      "alwaysRotateLabels": {
+        "type": "Boolean",
+        "desc": "Set to true if you always want the labels on the x axis to be rotated"
+      },
+      "alwaysShowLastLabel": {
+        "type": "Boolean",
+        "desc": "If the labels on the x axis are able to be reduced, setting this to \"true\" will ensure that the last label is always displayed. Default is false."
+      },
+      "preventXAxisCrowding": {
+        "type": "Boolean",
+        "desc": "Set to false if you don't want the labels on the x axis to be diminished to prevent overcrowding. Default is true."
+      },
+      "verticalLabelPadding": {
+        "type": "Number",
+        "desc": "Sets the minimum pixel space between the rotated labels before they will start diminishing to prevent overcrowding. Default is 15."
+      },
+      "horizontalLabelPadding": {
+        "type": "Number",
+        "desc": "The minimum pixel padding between the labels on the x axis before they are forced to rotate to prevent overcrowding. Default is 10."
+      },
+      "maxLabelCount": {
+        "type": "Number",
+        "desc": "Set if you want there to be a maximum number of labels on the x axis that can be displayed on the chart. Default is null."
+      },
+      "showAxisTickMarks": {
+        "type": "Boolean",
+        "desc": "Set to false if the tick marks are unwanted. Defaults to true."
+      },
+      "showGridLines": {
+        "type": "Boolean",
+        "desc": "Set to false if the grid lines are unwanted. Defaults to true."
+      },
+      "excludeSeries": {
+        "type": "Array",
+        "desc": "A list of the series that you do not want to include in the chart. The array should contain the seriesName or seriesDesc of the series you do not want to include."
+      },
+      "tooltips": {
+        "type": "Boolean",
+        "desc": "Decides if tooltips should be visible on the chart. Default is true."
+      }
+    },
+    "description": "The line chart widget will take a series of data and graph it as a line over time. You can see how it updates by changing the dropdown in the filter window.  Within the JSON data given to the widget you can set a number of properties including the name of each series (seriesDescr) that will be displayed in the legend, the color of the series (seriesStrokeColor) if you want it to be something other than the default, and the value in the legend (legendValue) if it should be something other than the last value in the series. Both charts are using the same data. The top charts takes all of the default values in the metadata while the bottom one has most properties set to display what each option will change. You can see how the chart responds by resizing the window. As you make the window smaller, the top chart will rotate the labels and then start cutting some labels out to prevent overlapping labels. The chart can handle multiple data formats as shown below. "
+  },
+  {
+    "widgetType": "MeasureItem",
+    "config": [
+      {
+        "fixture": "measureItem/measureItemData1-1.json"
+      },
+      {
+        "fixture": "measureItem/measureItemData2-1.json"
+      },
+      {
+        "fixture": "measureItem/measureItemData3-1.json"
+      },
+      {
+        "fixture": "measureItem/measureItemData4-1.json"
+      }
+    ],
+    "widgetProperties": {
+      "hideMeasureValue": {
+        "type": "Boolean",
+        "desc": "controls whether the measure description is shown or hidden. Defaults to false to show the value which is the number seen on the far right."
+      },
+      "hideMeasureDesc": {
+        "type": "Boolean",
+        "desc": "controls whether the measure description is shown or hidden.  Defaults to false to show the description which is the label seen next to the status icon."
+      },
+      "scoreFormatString": {
+        "type": "String",
+        "desc": "the format for the score (see Numerial.js)"
+      }
+    },
+    "description": "This widget is often used inside other widgets (for example: measure trend chart) to show the detailed information about a measure, its value, and its status.  This is also often added to columns in a grid table or chart grid to indicate status.  There are three stages of the status which are good (1), warning (2), and bad (3) shown in the order above.  The statusId can be set with the numbers 1-3 to indicate the coordinating status.  When added to a grid table, \"value\" is changed to \"measureScore\".  For more information about the grid table, please click the chart above. "
+  },
+  {
+    "widgetType": "MeasureTrendChart",
+    "config": [
+      {
+        "fixture": "measureTrendChart/measureTrendChartData1-1.json"
+      }
+    ],
+    "widgetProperties": {
+      "chartType": {
+        "type": "String",
+        "desc": "options between \"Bar\", \"Area\", \"Line\", and \"Pie\".  The top chart is the default line and the bottom has chartType set to \"Bar\"."
+      },
+      "hideTimeframes": {
+        "type": "Boolean",
+        "desc": "set to true if you want to hide the timeframes that are in the JSON data from being displayed on the bottom."
+      },
+      "chartProperties": {
+        "type": "Object",
+        "desc": "the properties that are available for the specific chart type that was selected.  See the specific chart type for more information."
+      },
+      "showLegend": {
+        "type": "Boolean",
+        "desc": "whether or not the legend should be visible on the chart.  Default is set to true which shows the legend. "
+      },
+      "excludeEmpytSeries": {
+        "type": "Boolean",
+        "desc": "set to true if you don’t want to display an empty dataset.  Default is false which will display an empty series."
+      },
+      "minVal": {
+        "type": "Number",
+        "desc": "sets the minimum value for the chart"
+      },
+      "maxVal": {
+        "type": "Number",
+        "desc": "sets the maximum value for the chart"
+      },
+      "significanceMax": {
+        "type": "Number",
+        "desc": "usually set as a whole number between 3-5.  Sets the maximum number for the statistical significance of the chart.  Default is set to 3."
+      },
+      "contained": {
+        "type": "Boolean",
+        "desc": "whether or not the chart should be set inside a container providing a border around it.  Default is set to false with no container."
+      },
+      "additionalBaseClass": {
+        "type": "String",
+        "desc": "any additional base class that you want to set to add styling to the chart"
+      },
+      "chartTitle": {
+        "type": "String",
+        "desc": "the title for the chart.  This will be overridden if measureDesc is set in the JSON data sent to the chart. "
+      },
+      "chartSubTitle": {
+        "type": "String",
+        "desc": "the subtitle for the chart"
+      },
+      "firstSeriesPointDot": {
+        "type": "Boolean",
+        "desc": "whether or not the dots will appear on the first solid line in the line chart"
+      }
+    },
+    "description": " A measure trend chart is a line, area, bar, or pie chart with all the added information for a measure added to it.  The top chart displays the default line chart with no modification in the metadata.  The bottom one shows what will happen if you add a chartType and set it to \"Bar or \"BarChart\". Additional things that are set for the bottom chart in the metadata are significanceMax, contained, and chartSubTitle.  For the JSON data there are a couple different ways that the information for the chart can be set.  The top chart has \"timeframes\" set and it makes use of the \"labels\" property while the bottom one shows how to format the JSON without the \"labels\" property.  When the data filter is changed to \"Data 2\", the value disappears from the top chart because the \"hideLegendValue\" property is set to true for every item in the chartSeries.  The format for the numbers on the bottom chart change when the data changes because the data has different values for the \"formatString\" property.  The significance is displayed on the bottom chart by the stars in the top right of the chart.  For more information about the chart itself, see the documentation for the specific chart that you are wishing to add.  The measure item documentation will provide more information about the properties pertaining to the measure. "
+  },
+  {
+    "widgetType": "Notification",
+    "config": [
+      {
+        "fixture": "notification/notificationData1-1.json"
+      },
+      {
+        "fixture": "notification/notificationData1-2.json"
+      }
+    ],
+    "description": "Allows a notification to be displayed to the user that includes a message and a type property. The type can be either \"info\" (default), \"error\", \"warn\", or \"success\". The message can have a link for the user to click to send them to another page. \"This link\" will send the user to Google while \"New Link\" will dispatch an event in the example above. Currently supported patterns include: [This link](relative/url/only?a=1&b=2|true) -> <span class=\"get\" data-target=\"relative/url/only?a=1&b=2\">This link</span> \"|true\" above implies that this is a continue link that should be POST'd to, and the expectation is another notification response. [This link](newEvent) -> <span class=\"customEvent hyperlink\" data-evt=\"newEvent\">This link</span> when the link is clicked, the event in parenthesis will be dispatched [This link](http://example.net/) -> <a href=\"http://example.net/\" target=\"_blank\">This link</a> note more specific patterns should be provided first, as patterns are replaced in the order provided"
+  },
+  {
+    "widgetType": "OverviewToggleBar",
+    "config": [
+      {
+        "fixture": "overviewToggleBar/overviewToggleBarData1-1.json",
+        "widgetProperties": {
+          "title": "Legend"
+        }
+      }
+    ],
+    "widgetProperties": {
+      "title": {
+        "type": "String",
+        "desc": "the title for the overview toggle bar"
+      }
+    },
+    "description": "The overview toggle bar (also known as the Legend widget) allows you to create a legend for your page.  The first 4 items in the legend show what is shown when the statusId is set to 1, 2, 3, and 7 respectively.  The fifth \"I’m Blank\" example shows what an available statusId will look like and you can then style the blank status icon into the icon you desire with some css.  The last two examples show how to style the status icon.  Their status ids are 6 and 8 and the css corresponds to that by styling \".measure-status-6\" and \".measure-status-8\"."
+  },
+  {
+    "widgetType": "ProgressBar",
+    "config": [
+      {
+        "fixture": "progressBar/progressBarData1-1.json",
+        "widgetProperties": { }
+      }
+    ],
+    "widgetProperties": {
+      "stepClasses": {
+        "type": "Object",
+        "desc": "The css classes and icons that you want to show with the different states of the steps (selected, complete, locked)."
+      },
+      "completeProp": {
+        "type": "String",
+        "desc": "the property in the data that states whether or not a step is complete"
+      },
+      "title": {
+        "type": "String",
+        "desc": "Title on top of the progress bar"
+      },
+      "progressSummaryTitle": {
+        "type": "String",
+        "desc": "The phrase next to the number of steps completed under the progress bar"
+      }
+    },
+    "description": "Keeps track of the user's progress through a wizard style layout.  Has the ability to have \"locked\" steps that would need to be unlocked before continuing to the next step."
+  },
+  {
+    "widgetType": "ScatterPlot",
+    "config": [
+      {
+        "fixture": "scatterPlot/scatterPlotData1-1.json",
+        "widgetProperties": {
+          "percentPaddingY": 0.01
+        }
+      },
+      {
+        "fixture": "scatterPlot/scatterPlotData1-2.json"
+      }
+    ],
+    "widgetProperties": {
+      "formatString": {
+        "type": "String",
+        "desc": "format of the numbers on the axis and legend (see Numeral.js). Default is \"\""
+      },
+      "baseClass": {
+        "type": "String",
+        "desc": "the base class for the widget's div. Default is \"card\" which adds the shading around the chart to create a card effect"
+      },
+      "title": {
+        "type": "String",
+        "desc": "The title of the chart"
+      },
+      "xAxisLabel": {
+        "type": "String",
+        "desc": "The label on the x axis of the chart and in the tooltip on hover."
+      },
+      "yAxisLabel": {
+        "type": "String",
+        "desc": "The label on the y axis of the chart and in the tooltip on hover."
+      },
+      "heightRatio": {
+        "type": "Number",
+        "desc": "The ratio of the height to the width. As the chart's width changes, so will the height if this is set. This value overrides the height property. Must be \"null\" to allow the height property to be expressed."
+      },
+      "height": {
+        "type": "Number",
+        "desc": "the height of the chart. Defaults to 250."
+      },
+      "marginRight": {
+        "type": "Number",
+        "desc": "The margin to the right of the chart in pixels. Defaults to 25."
+      },
+      "marginLeft": {
+        "type": "Number",
+        "desc": "The margin to the left of the chart in pixels. Defaults to 60."
+      },
+      "marginTop": {
+        "type": "Number",
+        "desc": "The margin on the top of the chart in pixels. Defaults to 20."
+      },
+      "marginBottom": {
+        "type": "Number",
+        "desc": "The margin the bottom of the chart in pixels. Defaults to 50."
+      },
+      "minWidth": {
+        "type": "Number",
+        "desc": "The minimum width in pixels that the chart is allowed to reach. Default is 200."
+      },
+      "minHeight": {
+        "type": "Number",
+        "desc": "The minimum height in pixels that the chart is allowed to reach. Default is 150."
+      },
+      "min": {
+        "type": "Number",
+        "desc": "the minimum value on the y axis of the chart"
+      },
+      "max": {
+        "type": "Number",
+        "desc": "the maximum value on the y axis of the chart"
+      },
+      "datasetStrokeWidth": {
+        "type": "Number",
+        "desc": "the width of the lines in pixels. Default is 2."
+      },
+      "lineInterpolation": {
+        "type": "String",
+        "desc": "Option between \"cardinal\" (curved line - Default) or \"linear\" (straight line)."
+      },
+      "percentPaddingX": {
+        "type": "Number",
+        "desc": "A percent of the range on the x axis that will pad the min and max. Default is 0.05."
+      },
+      "percentPaddingY": {
+        "type": "Number",
+        "desc": "A percent of the range on the y axis that will pad the min and max. Default is 0.05."
+      },
+      "yAxisLabelPadding": {
+        "type": "Number",
+        "desc": "The minimum pixel padding between the labels on the y axis before they are cut down. Default is 40."
+      },
+      "showAxisTickMarks": {
+        "type": "Boolean",
+        "desc": "Set to false if the tick marks are unwanted. Defaults to true."
+      },
+      "showGridLines": {
+        "type": "Boolean",
+        "desc": "Set to false if the grid lines are unwanted. Defaults to true."
+      },
+      "excludeSeries": {
+        "type": "Array",
+        "desc": "A list of the series that you do not want to include in the chart. The array should contain the seriesName or seriesDesc of the series you do not want to include."
+      },
+      "tooltips": {
+        "type": "Boolean",
+        "desc": "Decides if tooltips should be visible on the chart. Default is true."
+      }
+    },
+    "description": "The scatter will plot the x and y values given and display the data in a tooltip on hover. You can have line on the graph by setting the \"chartType\" on each series in the data. You can see how it updates by changing the dropdown in the filter window.  Within the JSON data given to the widget you can set a number of properties including the name of each series (seriesDescr) that will be displayed in the tooltip and the color of the series (seriesStrokeColor) if you want it to be something other than the default. Both charts are using the same data. The top charts take all of the default values in the metadata while the bottom one has most properties set to display what each option will change. You can see how the chart responds by resizing the window. The chart can handle multiple data formats as shown below. "
+  },
+  {
+    "widgetType": "Select",
+    "config": [
+      {
+        "fixture": "catBreeds.json"
+      },
+      {
+        "fixture": "select/selectData1-1.json",
+        "widgetProperties": {
+          "promptLabel": "Choose one",
+          "labelProp": "name",
+          "valueProp": "type",
+          "subtextProp" : "type",
+          "grouped" : true,
+          "groupLabelProp" : "name"
+        }
+      }
+    ],
+    "widgetProperties": {
+      "confirmChange":{
+        "type": "Boolean",
+        "desc": "prompts the user to confirm that they want change the value of the dropdown before dispatching a change event"
+      },
+      "confirmationMessage":{
+        "type": "String",
+        "desc": "confirmation message displayed to make sure the user wants to change the dropdown.  Only shows when confirmChange is true."
+      },
+      "labelProp": {
+        "type": "String",
+        "desc": "what value you want to be displayed and selected (defaults to \"label\")"
+      },
+      "promptLabel": {
+        "type": "String",
+        "desc": "The label for the selection list filter"
+      },
+      "valueLabel": {
+        "type": "String",
+        "desc": "what value you want to be dispatched once the label is selected (defaults to \"id\")"
+      },
+      "targetValueProp": {
+        "type": "String",
+        "desc": "the target property for each data item if there is a target url.  If an option with a target is clicked, the url will be opened in a new tab.  Default: \"target\""
+      }
+    },
+    "description": "A Selection List is filter that can be created in the \"App Menu Options, Filters, & Widgets\" tab in the metadata manager.  It is a dropdown list of string values that allows the user to select only one item from the list. By default the filter is located in the top right of the screen seen here with the \"Filter By Cat Type\" selection list."
+  },
+  {
+    "widgetType": "SelectionListContainer",
+    "config": [
+      {
+        "fixture": "selectionListContainer/selectionListContainerData1-1.json"
+      },
+      {
+        "fixture": "selectionListContainer/selectionListContainerData2-1.json"
+      }
+    ],
+    "widgetProperties": {
+      "viewSelectionPrompt": {
+        "type": "String",
+        "desc": "the prompt for the selection list.  Default is \"View\"."
+      },
+      "containerTitle": {
+        "type": "String",
+        "desc": "the label of the items in the dropdown.  This is set in the nested widget’s properties and not in the selectionListContainer properties."
+      }
+    },
+    "description": "A Selection List Container is a selection list that will show/hide what is seen on a page.  When the selection is changed, it will hide what is not selection and show what is selected.  The data source will only be called when a widget is set to render on the screen meaning the data for the grid table in this example is not called until \"Second\" is selected.  A demonstration of this can be seen by changing the selection in the top right from \"First\" to \"Second\".  Unless a \"containerTitle\" is given to the widget that you are toggling between the value shown in the dropdown will be the name of the widget that was given in the metadata manger.  Since you can switch between any widget with a selection list container, you can also switch to a container that contains multiple widgets. In this case you only have to set the \"containerTitle\" for the container that you are wanting the user to switch to and not every widget inside that container."
+  },
+  {
+    "widgetType": "SimpleContainer",
+    "config": [
+      {},
+      {
+        "widgetProperties": {
+          "baseClass": "card padded"
+        }
+      }
+    ],
+    "widgetProperties": {
+      "baseClass": {
+        "type": "String",
+        "desc": "this is used to specify the css class for the simple container.  The default is \"shady-container\" which has a grey background (shown in the first example).  The second example has baseClass set to \"\"."
+      }
+    },
+    "description": "Simple container is a box that is used to contain other widgets.  The top example is the simple container by itself and the bottom is the simple container with a title bar inside.  Once a simple container is created in the metadata, you can choose which widgets go inside it by going to the specific widget and choosing the container from the dropdown in the metadata manager.  You have to make sure the index for the widget is greater than the index for the simple container.  If you set the data for a simple container and do not set the data for any of the widgets inside it, the widgets inside will use the data provided by the simple container."
+  },
+  {
+    "widgetType": "Slider",
+    "config": [
+      {
+        "fixture":"slider/sliderData1-1.json",
+        "widgetProperties": {
+          "title": "Title",
+          "baseClass": "card"
+        }
+      },
+      {
+        "fixture":"slider/sliderData1-2.json"
+      }
+    ],
+    "widgetProperties": {
+      "labelsReducedFromLeft" : {
+        "type": "Boolean",
+        "desc": "removing labels when they don't fit from left to right of the axis which causes the first label to always show but doesn't guarantee that the last one will (since all the labels are evenly spaced). If set to false, the calculation will be switched and the reductions will start at the right which means the last label will always show but since all the labels are evenly spaced, it doesn't guarantee that the first label will always be there."
+      }
+    },
+    "description": ""
+  },
+  {
+    "widgetType": "SparkBarChart",
+    "config": [
+      {
+        "fixture": "sparkBarChart/sparkBarChartData0-1.json"
+      }
+    ],
+    "description": "A spark bar chart is a one column horizontal bar chart that is used in a grid.  The top bar demonstrated what it will look like outside of a grid with all the default settings.  Inside the chart the bars go in the order of not having the statusId set in the JSON data and then having it set to 1, 2, and 3 in that order.  You can either set the \"value\" attribute to a decimal that will display the length of the colored bar as a percent of the total are available or you can set the \"possibleValue\" attribute so the \"value\" will be the value to display out of a possible value.  With these two values, it will calculate the percent that the colored bar will take up.  Below are some examples of the data to make this happen.  Notice that in the grid table data the first three columns display three different ways of passing in the data needed to display the spark bar.  For more information about adding it into a grid, see the Grid Table example."
+  },
+  {
+    "widgetType": "SparkLineChart",
+    "config": [
+      {
+        "fixture": "sparkLineChart/sparkLineChartData1-2.json"
+      }
+    ],
+    "widgetProperties": {
+      "dataSeries": {
+        "type": "String",
+        "desc": "the string value that will correspond to the seriesName of the series that you want to be displayed.  Useful if you have multiple series in the chartSeries but only want a specific one to be displayed on the screen. "
+      },
+      "excludeSeries": {
+        "type": "Array",
+        "desc": "A list of the series that you do not want to include in the chart. The array should contain the seriesName or seriesDesc of the series you do not want to include."
+      }
+    },
+    "description": " A spark line chart is a miniature line chart that can fit in a table. Multiple series can be displayed in the line chart but if only one particular series out of the list is wanted, you can set the dataSeries property to the corresponding seriesName in the widget properties for the column type containing the spark line chart.  Below is an example of the structure of the metadata for this setting.  The line chart above contains the data for the cat’s content and the average content but only the cat’s content is being shown because of the dataSeries setting.  In the JSON data for the widget you will notice there are multiple structures for the data.  The labels are not needed since they will not be shown.  This line chart will simply graph the dataPoints given in the order that they are given.  For more information about embedding the widget inside the table shown above, please see the Grid Table widget documentation. "
+  },
+  {
+    "widgetType": "Stars",
+    "config": [
+      {
+        "fixture": "stars/starsData1-1.json"
+      },
+      {
+        "fixture": "stars/starsData2-1.json",
+        "widgetProperties": {
+          "starCharacter": "cats"
+        }
+      }
+    ],
+    "widgetProperties": {
+
+    },
+    "description": "The stars widget is simply a widget that will represent asterisks as a ux-approved star image.  You need to put the coordinating number of asterisks in the JSON data."
+  },
+  {
+    "widgetType": "Scorecard",
+    "config": [
+      {
+        "fixture": "summaryBar/summaryBarData1-1.json"
+      },
+      {
+        "fixture": "summaryBar/summaryBarData2-1.json",
+        "widgetProperties": {
+          "visual": true
+        }
+      }
+    ],
+    "widgetProperties": {
+      "visual": {
+        "type": "Boolean",
+        "desc": "whether or not there should be a gauge chart and/or a comparative box plot show in the card"
+      },
+      "formatString": {
+        "type": "String",
+        "desc": "the format for all of the values on the card (see Numeral.js)"
+      }
+    },
+    "description": "A summary bar can include visual widgets such as a gauge and comparative box plot as well as a simple summary bar item.  The top example shows a row of summary bar items while the second example show multiple visual widgets.  If visual is set to true and there is a possibleValue in the data, a gauge chart will be drawn.  If visual is true and there is either a min and max or a boxplot variable in the JSON, a comparative box plot is shown.  Please see comparative box plot for more information about the data structure if you use the boxplot variable here.  To get the sections to stack as shown in the second scorecard, set the scorecardID to the id for the widget you want it to be underneath.  Example data is shown below for both scorecards."
+  },
+  {
+    "widgetType": "SummaryBarItem",
+    "config": [
+      {
+        "fixture": "summaryBarItem/summaryBarItemData1-1.json"
+      }
+    ],
+    "widgetProperties": {
+      "formatString": {
+        "type": "String",
+        "desc": "the format of the value and possibleValue in the widget (see Numeral.js)"
+      },
+      "width": {
+        "type": "Number",
+        "desc": "the percent width that you want the summary bar item to take up (ex: \"width\" : 20 means that the summary bar item will take up 20% of the width available)"
+      }
+    },
+    "description": "If you give the summary bar item a value and a possible value, it will add \"of\" in the middle.  You can also give it a postfix and prefix to create a sentence or statement.  The top example has greyed out texted because \"inactive\" is set to true in the widget data.  Below is the data that was used to create the two examples above. For more information about embedding widgets in a grid table, please click on a row in the table."
+  },
+  {
+    "widgetType": "Switch",
+    "config": [
+      {
+        "fixture": "switch/switchData1.json"
+      }
+    ],
+    "widgetProperties": {
+      "label": {
+        "type": "String",
+        "desc": "The label for the switch"
+      },
+      "value": {
+        "type": "String",
+        "desc": "the value for the \"value\" property of an html checkbox"
+      },
+      "name": {
+        "type": "String",
+        "desc": "this value for the \"name\" property of an html checkbox"
+      },
+      "selected": {
+        "type": "Boolean",
+        "desc": "what the default value should be for the switch.  Default is set to false"
+      },
+      "disabled": {
+        "type": "Boolean",
+        "desc": "whether the switch should be disabled on the screen"
+      }
+    },
+    "description": "This widget is a basic html switch.  The top switch shows all the default values with the label property set to \"Metadata set label\".  The bottom switch has disabled set to \"true\" and gets the information from the widget data."
+  },
+  {
+    "widgetType": "TextInput",
+    "config": [
+      {
+        "widgetProperties": {}
+      },
+      {
+        "widgetProperties": {
+          "clearable": false,
+          "placeholder": "Enter your cat's name",
+          "promptLabel": "Cat's name",
+          "width": 200
+        }
+      }
+    ],
+    "widgetProperties": {
+      "promptLabel": {
+        "type": "String",
+        "desc": "The label for the input box. "
+      },
+      "placeholder": {
+        "type": "String",
+        "desc": "The greyed out description inside the input box.  Defaults to \"Enter keyword(s)\""
+      },
+      "width": {
+        "type": "Number",
+        "desc": "The width of the text input"
+      },
+      "clearable": {
+        "type": "Boolean",
+        "desc": "Determines if the text input has the \"x\" for clearance of text when something is typed in the box.  Defaults to \"true\"."
+      }
+    },
+    "description": "This widget is a basic html text input box. The top widget has no widget properties assigned to it and instead accepts all the defaults while the bottom has been assigned a width, placeholder, clearance, and promptLabel."
+  },
+  {
+    "widgetType": "TitleBar",
+    "config": [
+      {
+        "fixture": "titleBar/titleBarData1-1.json"
+      }
+    ],
+    "widgetProperties": {
+      "title": {
+        "type": "String",
+        "desc": "the title to be displayed"
+      },
+      "secondary": {
+        "type": "Boolean",
+        "desc": "whether or not it is a secondary title (defaults to \"false\")"
+      }
+    },
+    "description": "Title bar is simply a widget that displays a title.  The first title is the default while the second has secondary set to true.  You can also set the title attribute by sending in a JSON file with the string to be displayed in it."
+  },
+  {
+    "widgetType": "ToggleBar",
+    "config": [
+      {
+        "fixture": "toggleBar/toggleBarData.json",
+        "widgetProperties": {
+          "valueProp": "id"
+        }
+      },
+      {
+        "fixture": "toggleBar/toggleBarData.json",
+        "widgetProperties": {
+          "valueProp": "id",
+          "baseClass": "tab-bar"
+        }
+      },
+      {
+        "fixture": "toggleBar/toggleBarData.json",
+        "widgetProperties": {
+          "valueProp": "id",
+          "baseClass": "tab-bar-simple"
+        }
+      },
+      {
+        "fixture": "toggleBar/toggleBarData2.json",
+        "widgetProperties": {
+          "baseClass": "toggle-button-bar toggle-single-display"
+        }
+      }
+    ],
+    "widgetProperties": {
+      "baseClass": {
+        "type": "String",
+        "desc": "options between \"toggle-button-bar\" (default), \"tab-bar\", \"tab-bar-simple\" which controls the look of the tabs as shown above in the corresponding order.  The last option is \"toggle-button-bar toggle-single-display\".  This allows an on/off behavior for the toggle as shown by the \"Edit\"/\"View\" button toggle."
+      },
+      "valueProp": {
+        "type": "String",
+        "desc": "the name of the property you would like as the value for each tab.  The default is \"value\"."
+      }
+    },
+    "description": "Toggle bar allows you to have a label for each toggle and a value that can be used to determine which one the user selected.  There are four different classes that can be used for the toggle as shown above.  In the example, valueProp was set to \"id\" because the JSON used \"id\" instead of \"value\"."
+  }
+]
