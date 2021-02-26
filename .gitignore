@@ -1,0 +1,15 @@
+target/
+dist/
+build/
+node_modules/
+.DS_Store
+.classpath
+.settings/
+.repository/
+/test-output/
+/node_modules/
+node/
+*.iml
+.project
+.idea/
+dist/
