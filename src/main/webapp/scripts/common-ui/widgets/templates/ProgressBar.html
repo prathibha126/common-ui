@@ -1,0 +1,16 @@
+<div class="progress-steps-container card ${baseClass}">
+    <div class="progress-steps-header padded">
+        <h3>${title}</h3>
+        <div class="progress-bar-container">
+            <div class="progress-bar" style="width: ${progressPercent}%;"></div>
+        </div>
+        <div class="subtle">${progressSummary}</div>
+    </div>
+
+    <div data-fe-repeat="steps" class="progress-step">
+        <div class="padded $.{stepClass}" data-attach-event="click keypress|trySelectStep" tabindex="0" aria-pressed="false" role="button">
+            $.{title}
+            <i class="$.{iconClass} right"></i>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="calendar-container ${baseClass} padded">
+    <div class="calendar-title inline-block">${title}</div>
+    <div class="calendar-nav inline-block" data-attach-point="calendarDropdown"/>
+    <div class="calendar-inner-container">
+        <div class="calendar-month-title-container">
+            <div class='calendar-nav-button prev-button left noselect glyphicon glyphicon-chevron-left' data-attach-event="click|prevMonth"></div>
+            <div class='calendar-nav-button next-button right noselect glyphicon glyphicon-chevron-right' data-attach-event="click|nextMonth"></div>
+            <div class="calendar-month-title center" data-attach-point="calendarTitle"/>
+        </div>
+        <table class="calendar-table">
+            <thead class='center' data-attach-point="calendarHeader"/>
+            <tbody data-attach-point="calendarBody"/>
+        </table>
+    </div>
+</div>

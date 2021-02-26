@@ -1,0 +1,15 @@
+<div class="file-upload-container">
+    <iframe style="display: none; height: 0px; width: 0px;" name="fileUploadFrame" data-attach-point="fileUploadIframe"></iframe>
+    <span class="file-upload-prompt">${prompt}</span>
+    <form data-attach-point="fileUploadForm" method="post" accept-charset="utf-8" enctype="multipart/form-data" action="${actionUrl}" target="fileUploadFrame">
+        <div class="file-input">
+            <div class="file-input-facade">
+                <input aria-label=${ariaLabel} type="text" placeholder="File name..." readonly data-attach-point="fileName" class="input-text">
+                <div class="button-secondary">Browse...</div>
+            </div>
+            <div class="file-input-actual">
+                <input type="file" aria-label="select file to upload" data-attach-point="fileInput" name="file" accept="${acceptPattern}">
+            </div>
+        </div>
+    </form>
+</div>

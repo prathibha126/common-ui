@@ -1,0 +1,13 @@
+<div class="${baseClass}-outer ${baseClassOuter} ${gridFiltersClass} ${scrollContainerClass}">
+    <div class="grid-overview" data-attach-point="overview"></div>
+    <div class="grid-filters ${filtersPosition}" data-attach-point="filters"></div>
+    <div class="table-grid-container ${baseClass}" data-attach-point="gridContainerOuter">
+        <div class="grid-table-outer" data-attach-point="gridContainer">
+            <div data-attach-point="gridTitle" data-bind-value="title"></div>
+            <table class="grid-table" data-attach-point="grid">
+                <thead><tr class="grid-table-header" data-attach-point="header"></tr></thead>
+                <tbody><tr class="grid-row last-row ${noDataRowClass}"><td class="grid-cell" colspan="100"></td></tr></tbody>
+            </table>
+        </div>
+    </div>
+</div>
